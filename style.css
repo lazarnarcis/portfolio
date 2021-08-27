@@ -546,6 +546,7 @@ input:focus, textarea:focus {
 	bottom: 0;
 	height: 100%;
 }
+
 #mobile-menu-path{
 	fill: red;
   }
@@ -583,7 +584,7 @@ h3, #about-me{
 	color: black;
 	font-size: 20px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
 	#errs {
 		left: 20px;
 		right: 20px;
@@ -602,6 +603,9 @@ h3, #about-me{
 		cursor: pointer;
 		content:url("imgs/dark.svg");
 		filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(254deg) brightness(112%) contrast(101%);
+	}
+	.intro-title {
+		font-size: 20px;
 	}
 	[data-theme="dark"] #theme-switchers {
 		content:url("imgs/light.svg");
@@ -646,6 +650,10 @@ h3, #about-me{
 	}
 	#home-button {
 		margin-left: 0;
+	}
+	.center-icons .link-images {
+		height: 25px;
+		width: 25px;
 	}
 	.intro-container {
 		margin-left: 50px;
