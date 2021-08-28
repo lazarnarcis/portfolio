@@ -1,6 +1,6 @@
 let i = 0;
 let txt = 'I\'m a full stack developer.';
-let speed = 100;
+let speed = 50;
 function typeText() {
 	if (i < txt.length) {
 		document.getElementById("text-nav").innerHTML += txt.charAt(i);
@@ -9,35 +9,6 @@ function typeText() {
 	}
 }
 typeText();
-
-function submits() {
-	let firstname = document.getElementById('firstname').value;
-	let lastname = document.getElementById('lastname').value;
-	let email = document.getElementById('email').value;
-	let message = document.getElementById('message').value;
-	let txt = document.getElementById('errs');
-	let formErr = document.getElementById('form-err');
-	if (firstname == "") {
-		txt.style = "display: inline";
-		formErr.innerHTML = "Please enter a firstname.";
-	} else if (lastname == "") {
-		txt.style = "display: inline";
-		formErr.innerHTML = "Please enter a lastname.";
-	} else if (email == "") {
-		txt.style = "display: inline";
-		formErr.innerHTML = "Please enter a email.";
-	} else if (message == "") {
-		txt.style = "display: inline";
-		formErr.innerHTML = "Please enter a message.";
-	} else {
-		txt.style = "display : inline";
-		formErr.innerHTML = "Form is not available right now.";
-	}
-	setInterval(function() {
-		let txt = document.getElementById('errs');
-		txt.style = "display: none";
-	}, 5000);
-}
 let footer = document.getElementById('footer-content');
 let presentYear = new Date().getFullYear();
 footer.innerHTML = "&copy; Narcis " + presentYear;
