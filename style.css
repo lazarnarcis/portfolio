@@ -379,12 +379,15 @@ h3 {
 	height: 25px;
 	width: 25px;
 	cursor: pointer;
-	filter: invert(48%) sepia(13%) saturate(9%) hue-rotate(321deg) brightness(96%) contrast(84%);
+	filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(239deg) brightness(108%) contrast(99%);
 	transition: transform 0.3s;
 	margin-top: 5px;
 }
 #linkedin-i:hover {
 	filter: invert(30%) sepia(65%) saturate(6172%) hue-rotate(184deg) brightness(95%) contrast(101%);
+}
+#gitlab-i:hover {
+	filter: invert(42%) sepia(67%) saturate(6668%) hue-rotate(351deg) brightness(96%) contrast(84%);
 }
 #facebook-i:hover {
 	filter: invert(31%) sepia(80%) saturate(745%) hue-rotate(190deg) brightness(97%) contrast(80%);
@@ -417,6 +420,8 @@ h3 {
 .center-icons .link-images {
 	height: 30px;
 	width: 30px;
+	margin-left: 2.5px;
+	margin-right: 2.5px;
 	filter: invert(0%) sepia(0%) saturate(7484%) hue-rotate(208deg) brightness(88%) contrast(97%);
 }
 [data-theme="dark"] .center-icons .link-images {
@@ -451,6 +456,10 @@ h3 {
 #footer-content {
 	margin-right: 200px;
 	margin-top: 5px;
+}
+#right-footer .link-images {
+	margin-left: 2.5px;
+	margin-right: 2.5px;
 }
 #right-footer {
 	margin-left: 200px;
@@ -503,7 +512,7 @@ input, textarea {
 	outline: none;
 	border: var(--border-inputs);
 	box-sizing: border-box;
-	box-shadow: 0px 0px 2.5px grey;
+	box-shadow: 0px 0px 3px rgb(182, 182, 182);
 	font: 400 13.3333px Arial;
 	margin-bottom: 15px;
 	transition: all 0.3s ease-in;
@@ -515,8 +524,8 @@ textarea {
     font: 400 13.3333px Arial;
 }
 input:focus, textarea:focus {
-	border: 2px solid #99c3ff;
-	box-shadow: 0px 0px 0px grey;
+	border: 2px solid #4bbfbd;
+	box-shadow: none;
 	outline: none;
 }
 #small-text {
