@@ -35,7 +35,7 @@ body {
 	--nav-background: #4bbfbd;
 	--nav-shadow: 0px 0px 10px grey;
 	--placeholder-color: grey;
-	--border-input-focus: 2px solid #99c3ff;
+	--border-inputs: 2px solid white;
 }
 [data-theme="dark"] #skills, [data-theme="dark"] #about, [data-theme="dark"] footer {
 	background-color: rgb(34, 34, 34);
@@ -84,8 +84,8 @@ body {
 [data-theme="dark"] {
 	--nav-background: #727070;
 	--nav-shadow: 0px 0px 20px black;
-	--placeholder-color: white;
-	--border-input-focus: 2px solid #000000;
+	--placeholder-color: rgb(187, 187, 187);
+	--border-inputs: 2px solid rgb(82, 82, 82);
 }
 [data-theme="dark"] h3, [data-theme="dark"] #about-me {
 	color: rgb(199, 199, 199);
@@ -467,7 +467,6 @@ footer {
 	border-top: none;
 	box-shadow: 0px 0px 5px grey;
 }
-
 ::placeholder {
   	color: var(--placeholder-color);
   	opacity: 1;
@@ -478,7 +477,6 @@ footer {
 ::-ms-input-placeholder {
  	color: var(--placeholder-color);
 }
-
 label {
 	font-size: 20px;
 	left: 0;
@@ -489,17 +487,21 @@ label span {
 	color: #4bbfbd;
 }
 [data-theme="dark"] input, [data-theme="dark"] textarea {
-	background: rgb(85, 85, 85);
-	color: rgb(177, 177, 177);
+	background: rgb(82, 82, 82);
+	color: rgb(255, 255, 255);
+	box-shadow: none;
+}
+textarea {
+	height: 100px;
 }
 input, textarea {
 	border: none;
 	color: black;
-	padding: 7.5px;
+	padding: 5px;
 	width: 100%;
 	border-radius: 3px;
 	outline: none;
-	border: 2px solid white;
+	border: var(--border-inputs);
 	box-sizing: border-box;
 	box-shadow: 0px 0px 2.5px grey;
 	font: 400 13.3333px Arial;
@@ -513,7 +515,7 @@ textarea {
     font: 400 13.3333px Arial;
 }
 input:focus, textarea:focus {
-	border: var(--border-input-focus);
+	border: 2px solid #99c3ff;
 	box-shadow: 0px 0px 0px grey;
 	outline: none;
 }
@@ -551,10 +553,9 @@ input:focus, textarea:focus {
 	bottom: 0;
 	height: 100%;
 }
-
-#mobile-menu-path{
+#mobile-menu-path {
 	fill: red;
-  }
+}
 .close {
 	color: #aaa;
 	float: right;
