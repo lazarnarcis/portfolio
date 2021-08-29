@@ -257,6 +257,26 @@ h3 {
 	font-weight: bold;
 	transition: all 0.3s ease-in;
 }
+.project-buttons {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#code-prev {
+	text-decoration: none;
+	padding: 5px;
+	background: rgb(133, 173, 181);
+	border-radius: 15px;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: background-color .3s;
+}
+[data-theme="dark"] #code-prev {
+	background: rgb(65, 116, 126);
+}
+#code-prev:hover {
+	background-color:rgb(57, 81, 85);
+}
 #intro {
     background-image: url("imgs/background.jpg");
     background-position: center;
