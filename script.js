@@ -68,12 +68,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.documentElement.setAttribute("data-theme", "light");
     var themeSwitcher = document.getElementById("theme-switcher");
     themeSwitcher.onclick = function() {
-		var currentTheme = document.documentElement.getAttribute("data-theme");
-		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
-		document.documentElement.setAttribute("data-theme", switchToTheme);
-    }
-	var themeSwitchers = document.getElementById("theme-switchers");
-    themeSwitchers.onclick = function() {
 		themeSwitchers.style = "transform: scale(0.1)";
 		var currentTheme = document.documentElement.getAttribute("data-theme");
 		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
@@ -81,5 +75,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		setTimeout(function() {
 			themeSwitchers.style = "transform: scale(1)";
 		}, 300);
+    }
+	var themeSwitchers = document.getElementById("theme-switchers");
+    themeSwitchers.onclick = function() {
+		themeSwitchers.style = "transform: scale(0.1)";
+		var currentTheme = document.documentElement.getAttribute("data-theme");
+		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+		document.documentElement.setAttribute("data-theme", switchToTheme);
     }
 });
