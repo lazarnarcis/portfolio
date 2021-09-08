@@ -19,9 +19,10 @@ img {
 	margin-right:15%;
 	float:right;
 	cursor: pointer;
-	margin-top: 2px;
+	margin-top: 3px;
 	filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(254deg) brightness(112%) contrast(101%);
 	content:url("imgs/dark.svg");
+	transition: transform .3s;
 }
 [data-theme="dark"] #theme-switcher {
 	content:url("imgs/light.svg");
