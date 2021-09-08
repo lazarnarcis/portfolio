@@ -622,6 +622,22 @@ h3, #about-me{
 		padding-right: 50px;
 	}
 }
+*::selection 
+{
+    background-color:transparent;
+} 
+*::-moz-selection
+{
+    background-color:transparent;
+}
+*
+{        
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}    
 @media (max-width: 800px) {
 	#errs {
 		left: 20px;
@@ -641,6 +657,7 @@ h3, #about-me{
 		cursor: pointer;
 		content:url("imgs/dark.svg");
 		filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(254deg) brightness(112%) contrast(101%);
+		border-style:none;
 	}
 	.intro-title {
 		font-size: 20px;
