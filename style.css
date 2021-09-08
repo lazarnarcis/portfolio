@@ -660,6 +660,7 @@ h3, #about-me{
 		content:url("imgs/dark.svg");
 		filter: invert(99%) sepia(100%) saturate(2%) hue-rotate(254deg) brightness(112%) contrast(101%);
 		border-style: none;
+		transition: transform .3s;
 	}
 	.intro-title {
 		font-size: 20px;

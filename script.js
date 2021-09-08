@@ -74,8 +74,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 	var themeSwitchers = document.getElementById("theme-switchers");
     themeSwitchers.onclick = function() {
+		themeSwitchers.style = "transform: scale(0.1)";
 		var currentTheme = document.documentElement.getAttribute("data-theme");
 		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
 		document.documentElement.setAttribute("data-theme", switchToTheme);
+		setTimeout(function() {
+			themeSwitchers.style = "transform: scale(1)";
+		}, 300);
     }
 });
