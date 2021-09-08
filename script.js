@@ -52,32 +52,30 @@ $(document).ready(function() {
         return false;
     });
 });
-let modal = document.getElementById("myModal");
-let btn = document.getElementById("options-button-phone");
-let span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById("modal");
+let modalContent = document.getElementsByClassName("modal-content")[0];
+let btn = document.getElementById("menulogo");
+let span = document.getElementById("close");
 btn.onclick = function() {
-  modal.style.display = "block";
+  	modalContent.style = "transform: scaleX(1)";
+	modal.style = "display: inline";
 }
 span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+	modalContent.style = "transform: scaleX(0)";
+	modal.style = "display: none";
 }
 document.addEventListener("DOMContentLoaded", function(event) {
     document.documentElement.setAttribute("data-theme", "light");
     var themeSwitcher = document.getElementById("theme-switcher");
     themeSwitcher.onclick = function() {
-      var currentTheme = document.documentElement.getAttribute("data-theme");
-      var switchToTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", switchToTheme);
+		var currentTheme = document.documentElement.getAttribute("data-theme");
+		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+		document.documentElement.setAttribute("data-theme", switchToTheme);
     }
 	var themeSwitchers = document.getElementById("theme-switchers");
     themeSwitchers.onclick = function() {
-      var currentTheme = document.documentElement.getAttribute("data-theme");
-      var switchToTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", switchToTheme);
+		var currentTheme = document.documentElement.getAttribute("data-theme");
+		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+		document.documentElement.setAttribute("data-theme", switchToTheme);
     }
 });
