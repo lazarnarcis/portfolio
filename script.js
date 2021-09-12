@@ -9,6 +9,20 @@ function typeText() {
 	}
 }
 typeText();
+
+function programmerFunction() {
+	const txts = ['&nbsp;&nbsp;programmer&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;designer&nbsp;&nbsp;&nbsp;&nbsp;'];
+	let programmer = document.getElementById("programmer");
+	setInterval(function() {
+		if (programmer.innerHTML === "&nbsp;&nbsp;programmer&nbsp;&nbsp;") {
+			programmer.innerHTML = txts[1];
+		} else {
+			programmer.innerHTML = txts[0];
+		}
+	}, 2500);
+}
+programmerFunction();
+
 let footer = document.getElementById('footer-content');
 let presentYear = new Date().getFullYear();
 footer.innerHTML = "&copy; Narcis " + presentYear;

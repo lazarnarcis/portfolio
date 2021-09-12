@@ -24,6 +24,11 @@ img {
 	content:url("imgs/dark.svg");
 	transition: transform .3s;
 }
+#programmer {
+	border-top: 3px solid yellow;
+	transition: transform .3s;
+	margin: 5px;
+}
 [data-theme="dark"] #theme-switcher {
 	content:url("imgs/light.svg");
 }
