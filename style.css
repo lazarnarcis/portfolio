@@ -25,9 +25,9 @@ img {
 	transition: transform .3s;
 }
 #programmer {
-	border-top: 3px solid yellow;
+	border: 3px solid rgb(189, 189, 0);
 	transition: transform .3s;
-	margin: 5px;
+	margin: 2.5px;
 }
 [data-theme="dark"] #theme-switcher {
 	content:url("imgs/light.svg");
