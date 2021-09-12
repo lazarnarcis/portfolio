@@ -27,6 +27,7 @@ img {
 #programmer {
 	border: 3px solid rgb(189, 189, 0);
 	transition: transform .3s;
+	border-radius: 15px;
 	margin: 2.5px;
 }
 [data-theme="dark"] #theme-switcher {
