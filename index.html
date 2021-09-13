@@ -237,7 +237,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<span>The price of a project differs depending on your opportunities and preferences. Below you will find different ways to contact me.</span>
 		</p>
 	</div>
-	<form id="contact" action="contact.php" method="POST">
+	<form id="contact" method="POST">
 		<h3>Contact</h3>
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>
 		<label for="firstname" class="align-items-of-div">
@@ -265,7 +265,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<span>Message</span>
 		</label>
 		<textarea type="text" id="message" name="message" placeholder="I want a website..."></textarea>
-		<div class="contact-email"><button id="submit" type="submit">Submit</button>
+		<div class="contact-email"><a id="submit" onclick="submitForm()">Submit</a>
 		<span>or send email at <a href="mailto:lazarnarcis203@gmail.com" id="link-to-project">lazarnarcis203@gmail.com</a>.</span></div>
 	</form>
 	<footer>
@@ -281,6 +281,7 @@ When it comes to databases I use SQL, Firebase.</span>
 	</footer>
 	<div id="errs">
 		<p id="form-err"></p>
+		<button onclick="closeError();" id="button-errors">Cancel</button>
 	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
