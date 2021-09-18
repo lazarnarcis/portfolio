@@ -251,6 +251,7 @@ body {
 	border: none;
 	margin-top: 25px;
 	border-left: 2px solid rgb(124, 205, 232);
+	border-right: 2px solid rgb(124, 205, 232);
 }
 #content-of-projects {
 	border: none;
