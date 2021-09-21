@@ -253,8 +253,17 @@ body {
 	border-left: 2px solid rgb(124, 205, 232);
 	border-right: 2px solid rgb(124, 205, 232);
 }
+#project-of > div {
+	flex: 40%;
+}
+#project-of {
+	display: flex;
+  	flex-wrap: wrap;
+}
 #content-of-projects {
+	box-sizing: border-box;
 	border: none;
+	margin: 15px;
 }
 [data-theme="dark"] #content-of-projects {
 	border: 2px solid #3a3a3a;
@@ -429,6 +438,9 @@ h3 {
 [data-theme="dark"] #description-skills {
 	border-top: 2px solid #3a3a3a;
 	border-bottom: 2px solid #3a3a3a;
+}
+#project-of #description-skills {
+	min-height: 200px;
 }
 #description-skills {
 	padding-top: 5px;
@@ -741,5 +753,19 @@ h3, #about-me{
 	.intro-container {
 		margin-left: 50px;
 		margin-right: 50px;
+	}
+	#project-of > div {
+		flex: 100%;
+	}
+	#project-of {
+		display: inline;
+	}
+	#content-of-projects {
+		margin: 0px;
+		box-sizing: none;
+		margin-top: 25px;
+	}
+	#project-of #description-skills {
+		min-height: 0;
 	}
 }
