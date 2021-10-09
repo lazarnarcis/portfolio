@@ -10,6 +10,12 @@
 	<link rel="icon" href="imgs/website-logo.jpg">
 	<script src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Vollkorn&display=swap" rel="stylesheet">
 </head>
 <body id="home">
 	<a href="#" class="scrollToTop">Top</a>
@@ -19,7 +25,7 @@
 				<h1 class="intro-title" id="text-nav">Hello, I'm Narcis Lazar!<br/></h1> 
 				<div class="center-icons">
 					<a href="https://github.com/lazarnarcis" target="_blank"><img src="imgs/github.svg" class="link-images"></a>
-					<a href="https://gitlab.com/lazarnarcis" target="_blank"><img src="imgs/gitlab.svg" class="link-images"></a>
+					<a href="https://ro.linkedin.com/in/narcislazar" target="_blank"><img src="imgs/linkedin.svg" class="link-images"></a>
 				</div>
 			</div>
 		</div>
@@ -112,28 +118,14 @@ When it comes to databases I use SQL, Firebase.</span>
 				<b><span>Services</span></b> 
 			</div>
 			<div id="description-skills">
-				<span>I use different services and technologies. The most used technology by me is PHPMailer; with its help, I can easily send an e-mail to anyone.</span>
+				<span>I use different services and technologies. The most used technology by me is PHPMailer; with its help, I can easily send an e-mail to anyone. I use XAMPP to run .php files on localhost. XAMPP is one of the most popular PHP development environments. I also often use Git to implement various things on Github.</span>
 			</div>
 			<div id="languages">
 				<img src="imgs/phpmailer.jpg" alt="PHPMailer" id="language" title="PHPMailer">
-			</div>
-		</div>
-		<div id="content-of-project">
-			<div class="align-items-of-div">
-				<img src="imgs/devops.svg" alt="DevOps" id="project-logo">
-				<b><span>DevOps</span></b>
-			</div>
-			<div id="description-skills">
-				<span>I use XAMPP to run .php files on localhost. XAMPP is one of the most popular PHP development environments. I also often use Git to implement various things on Github.</span>
-			</div>
-			<div id="languages">
 				<img src="imgs/xampp.png" alt="XAMPP" id="language" title="XAMPP">
 				<img src="imgs/git.png" alt="Git" id="language" title="Git">
 				<img src="imgs/npm.png" alt="NPM" id="language" title="NPM">
 				<img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase">
-				<img src="imgs/vscode.png" alt="Visual Studio Code" id="language" title="Visual Studio Code">
-				<img src="imgs/adobeillustrator.png" alt="Adobe Illustrator" id="language" title="Adobe Illustrator">
-				<img src="imgs/sublimetext.png" alt="Sublime Text" id="language" title="Sublime Text">
 				<img src="imgs/filezilla.png" alt="FileZilla" id="language" title="FileZilla">
 			</div>
 		</div>
@@ -258,12 +250,12 @@ When it comes to databases I use SQL, Firebase.</span>
 			<img src="imgs/firstname.svg" alt="First Name" id="email-logo">
 			<span>First Name</span>
 		</label>
-		<input type="text" id="firstname" name="firstname" placeholder="Mark">
+		<input type="text" id="firstname" name="firstname" placeholder="Your First Name">
 		<label for="lastname" class="align-items-of-div">
 			<img src="imgs/lastname.svg" alt="Last Name" id="email-logo">
 			<span>Last Name</span>
 		</label>
-		<input type="text" id="lastname" name="lastname" placeholder="Zuckerberg">
+		<input type="text" id="lastname" name="lastname" placeholder="Your Last Name">
 		<label for="email" class="align-items-of-div">
 			<img src="imgs/email.svg" alt="Email" id="email-logo">
 			<span>Email</span>
@@ -279,7 +271,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<span>Message</span>
 		</label>
 		<textarea type="text" id="message" name="message" placeholder="I want a website..."></textarea>
-		<div class="contact-email"><a id="submit" onclick="submitForm()">Submit</a>
+		<div class="contact-email"><button id="submit" onclick="submitForm()" disabled>Submit</button>
 		<span>or send email at <a href="mailto:lazarnarcis203@gmail.com" id="link-to-project">lazarnarcis203@gmail.com</a>.</span></div>
 	</form>
 	<footer>

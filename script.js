@@ -25,19 +25,6 @@ function submitForm() {
 		errs.style = "transform: scale(1);";
 	}
 }
-function programmerFunction() {
-	const txts = ['&nbsp;&nbsp;programmer&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;designer&nbsp;&nbsp;&nbsp;&nbsp;'];
-	let programmer = document.getElementById("programmer");
-	setInterval(function() {
-		if (programmer.innerHTML === "&nbsp;&nbsp;programmer&nbsp;&nbsp;") {
-			programmer.innerHTML = txts[1];
-		} else {
-			programmer.innerHTML = txts[0];
-		}
-	}, 2500);
-}
-programmerFunction();
-
 function closeError() {
 	let error = document.getElementById("errs");
 	error.style = "transform: scale(0)";
