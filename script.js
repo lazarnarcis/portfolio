@@ -76,19 +76,23 @@ $(document).ready(function() {
 let modal = document.getElementById("modal");
 let modalContent = document.getElementsByClassName("modal-content")[0];
 let btn = document.getElementById("menulogo");
-let span = [document.getElementById("close"), document.getElementById("phone-menu")];
+let span = document.getElementById("close");
+let buttonPhone = document.getElementsByClassName("btns");
 btn.onclick = function() {
   	modalContent.style = "transform: scaleX(1)";
 	modal.style = "display: inline";
 }
-span[0].onclick = function() {
+for (let i = 0; i < buttonPhone.length; i++) {
+	buttonPhone[i].onclick = function() {
+		modalContent.style = "transform: scaleX(0)";
+		modal.style = "display: none";
+	}
+}
+span.onclick = function() {
 	modalContent.style = "transform: scaleX(0)";
 	modal.style = "display: none";
 }
-span[1].onclick = function() {
-	modalContent.style = "transform: scaleX(0)";
-	modal.style = "display: none";
-}
+
 document.addEventListener("DOMContentLoaded", function(event) {
     document.documentElement.setAttribute("data-theme", "light");
     var themeSwitcher = document.getElementById("theme-switcher");
