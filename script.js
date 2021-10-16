@@ -76,12 +76,16 @@ $(document).ready(function() {
 let modal = document.getElementById("modal");
 let modalContent = document.getElementsByClassName("modal-content")[0];
 let btn = document.getElementById("menulogo");
-let span = document.getElementById("close");
+let span = [document.getElementById("close"), document.getElementById("phone-menu")];
 btn.onclick = function() {
   	modalContent.style = "transform: scaleX(1)";
 	modal.style = "display: inline";
 }
-span.onclick = function() {
+span[0].onclick = function() {
+	modalContent.style = "transform: scaleX(0)";
+	modal.style = "display: none";
+}
+span[1].onclick = function() {
 	modalContent.style = "transform: scaleX(0)";
 	modal.style = "display: none";
 }

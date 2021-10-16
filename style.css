@@ -204,7 +204,7 @@ body {
 }
 #contact {
 	background-color: #f5f5f5;
-	box-shadow:  0px 0px 5px grey;
+	box-shadow: inset 0px 0px 5px grey;
 	border-top: none;
 	padding-bottom: 25px;
 	padding-top: 25px;
@@ -276,7 +276,7 @@ body {
 }
 #projects {
 	padding-bottom: 35px;
-	box-shadow: 0px 0px 5px grey;
+	box-shadow: inset 0px 5px 5px -5px grey;
 }
 h3 {
 	font-size: 30px;
@@ -541,7 +541,6 @@ footer {
 	right: 0;
 	left: 0;
 	border-top: none;
-	box-shadow: 0px 0px 5px grey;
 }
 ::placeholder {
   	color: var(--placeholder-color);
