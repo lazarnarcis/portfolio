@@ -49,7 +49,6 @@ body {
 	--nav-background: #4bbfbd;
 	--nav-shadow: 0px 0px 10px grey;
 	--placeholder-color: grey;
-	--border-inputs: 2px solid #fafafa;
 }
 [data-theme="dark"] #skills, [data-theme="dark"] #about, [data-theme="dark"] footer {
 	background-color: rgb(34, 34, 34);
@@ -76,10 +75,6 @@ body {
 }
 [data-theme="dark"] #contact {
 	box-shadow: none;
-	border-top: 3px solid rgb(21, 21, 21);
-}
-[data-theme="dark"] #projects, [data-theme="dark"] #skills {
-	border-bottom: 3px solid rgb(21, 21, 21);
 }
 [data-theme="dark"] #profile-picture {
 	box-shadow: none;
@@ -87,7 +82,6 @@ body {
 }
 [data-theme="dark"] footer {
 	box-shadow: none;
-	border-top:3px solid black;
 }
 [data-theme="dark"] .link-images:hover,
 [data-theme="dark"] .link-images:focus {
@@ -97,7 +91,6 @@ body {
 	--nav-background: #727070;
 	--nav-shadow: 0px 0px 20px black;
 	--placeholder-color: rgb(187, 187, 187);
-	--border-inputs: 2px solid rgb(82, 82, 82);
 }
 [data-theme="dark"] h3, [data-theme="dark"] #about-me {
 	color: rgb(199, 199, 199);
@@ -210,6 +203,7 @@ body {
 	border-bottom: none;
 }
 #contact {
+	background-color: #f5f5f5;
 	box-shadow:  0px 0px 5px grey;
 	border-top: none;
 	padding-bottom: 25px;
@@ -569,27 +563,25 @@ label span {
 	color: #4bbfbd;
 }
 [data-theme="dark"] input, [data-theme="dark"] textarea {
-	background: rgb(82, 82, 82);
 	color: rgb(255, 255, 255);
+	background-color:rgb(89, 89, 89);
 	box-shadow: none;
-}
-textarea {
-	height: 100px;
 }
 input, textarea {
 	border: none;
 	color: black;
-	padding: 5px;
+	padding: 7.5px;
 	width: 100%;
 	border-radius: 3px;
 	outline: none;
-	border: var(--border-inputs);
+	border: none;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 3px rgb(182, 182, 182);
+	-webkit-box-shadow: inset 0px 0px 0px 2px rgb(213, 213, 213);
+ 	box-shadow: inset 0px 0px 0px 2px rgb(213, 213, 213);
 	font: 400 13.3333px Arial;
 	margin-bottom: 15px;
 	transition: all 0.3s ease-in;
-	background-color: #fafafa;
+	background-color: white;
 }
 #content-of-project > #description-skills > span, #content-of-projects > #description-skills > span {
 	font-family: 'Work Sans', sans-serif;
@@ -597,10 +589,11 @@ input, textarea {
 }
 textarea {
     font: 400 13.3333px Arial;
+	height: 100px;
 }
 input:focus, textarea:focus {
-	border: 2px solid #4bbfbd;
-	box-shadow: none;
+	-webkit-box-shadow: inset 0px 0px 0px 2px #4bbfbd;
+ 	box-shadow: inset 0px 0px 0px 2px #4bbfbd;
 	outline: none;
 }
 #small-text {
