@@ -1,5 +1,5 @@
 let i = 0;
-let txt = 'I\'m a full stack developer.';
+let txt = 'I\'m a web developer.';
 let speed = 50;
 function typeText() {
 	if (i < txt.length) {
