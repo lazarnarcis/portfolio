@@ -100,8 +100,7 @@ body {
 	background-color: white;
 }
 [data-theme="dark"] .scrollToTop {
-	background: rgb(94, 94, 94);
-	color: white;
+	background: white;
 }
 #price-text {
 	font-size: 25px;
@@ -113,25 +112,22 @@ body {
 }
 .scrollToTop{
     padding: 5px; 
-    text-align:center; 
-    background: #5cdfed;
-    font-weight: bold;
-    color: #3c7980;
-    text-decoration: none;
+	height: 30px;
+	width: 30px;
     position:fixed;
     bottom: 5px;
 	right: 5px;
+	border-radius: 50%;
+	background: rgb(186, 186, 186);
     display:none;
 	z-index: 99;
-	border-radius: 5px;
 	transition: all 0.3s ease-in;
 }
 #text-about > span {
 	display: block;
 }
 .scrollToTop:hover, .scrollToTop:focus{
-	box-shadow: 0px 0px 5px grey;
-	color: white;
+	background: rgb(95, 95, 95);
 }
 .nav-bar ul {
 	list-style-type: none;
