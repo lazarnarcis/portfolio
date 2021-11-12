@@ -24,6 +24,9 @@ img {
 	content:url("imgs/dark.svg");
 	transition: transform .3s;
 }
+[data-theme="dark"] #programmer {
+	border: 3px solid white;
+}
 #programmer {
 	border: 3px solid #4bbfbd;
 	transition: transform .3s;
@@ -66,12 +69,15 @@ body {
 	border-right: 2px solid grey;
 }
 [data-theme="dark"] #submit {
+	background-color: white;
+	color: black;
 	box-shadow: none;
-	border: 1px solid rgb(96, 96, 206);
+	border: 1px solid black;
 }
 [data-theme="dark"] #submit:hover, [data-theme="dark"] #submit:focus {
 	box-shadow: none;
-	border: 1px solid rgb(101, 196, 101);
+	background-color: lightgrey;
+	border: 1px solid white;
 }
 [data-theme="dark"] #contact {
 	box-shadow: none;
@@ -101,6 +107,10 @@ body {
 }
 [data-theme="dark"] .scrollToTop {
 	background: white;
+	border-color: white;
+}
+[data-theme="dark"] .scrollToTop:hover {
+	background: grey;
 }
 #price-text {
 	font-size: 25px;
@@ -111,23 +121,24 @@ body {
 	margin-bottom: 15px;
 }
 .scrollToTop {
-    padding: 5px; 
-	height: 30px;
-	width: 30px;
-    position:fixed;
-    bottom: 5px;
-	right: 5px;
+    padding: 10px; 
+	height: 25px;
+	width: 25px;
+    position: fixed;
+    bottom: 10px;
+	right: 10px;
 	border-radius: 50%;
 	background: rgb(186, 186, 186);
-    display:none;
+    display: none;
 	z-index: 99;
 	transition: all 0.3s ease-in;
+	border: 2px solid rgb(186, 186, 186);
 }
 #text-about > span {
 	display: block;
 }
 .scrollToTop:hover {
-	background: rgb(95, 95, 95);
+	background: white;
 }
 .nav-bar ul {
 	list-style-type: none;
@@ -153,12 +164,10 @@ body {
 	border-radius: 10px;
 	cursor: pointer;
 }
-
 #desktop-nav li a:hover {
 	background-color: #037c8a;
 	color: white;
 }
-
 #desktop-nav li a {
 	padding: 5px 10px;
 	font-family: 'Ubuntu', sans-serif;
@@ -169,11 +178,9 @@ body {
 #home-button {
 	margin-left: 15%;
 }
-
 .active a {
 	color: white;
 }
-
 .nav-bar{
 	overflow: hidden;
 	position: fixed;
@@ -181,7 +188,6 @@ body {
 	width: 100%;
 	z-index: 99;
 }
-
 #projects div b,#skills div b{
 	color: #4bbfbd;
 }
@@ -281,6 +287,10 @@ h3 {
 	margin: 0;
 	text-align: center;
 }
+[data-theme="dark"] #link-to-project {
+	color: white;
+	text-decoration: underline;
+}
 #link-to-project {
 	text-decoration: none;
 	color: #1fbbcc;
@@ -302,7 +312,11 @@ h3 {
 	transition: background-color .3s;
 }
 [data-theme="dark"] #code-prev {
-	background: rgb(65, 116, 126);
+	background: lightgrey;
+	color: black;
+}
+[data-theme="dark"] #code-prev:hover {
+	background: white;
 }
 #code-prev:hover {
 	background-color:rgb(57, 81, 85);
@@ -346,6 +360,9 @@ h3 {
 #link-to-project:hover,
 #link-to-project:focus {
 	color: #348feb;
+}
+[data-theme="dark"] #link-to-project:hover, [data-theme="dark"] #link-to-project:focus {
+	color: lightgrey;
 }
 #project-logo {
 	height: 25px;

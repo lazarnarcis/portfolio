@@ -94,7 +94,7 @@ span.onclick = function() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.documentElement.setAttribute("data-theme", "light");
+    document.documentElement.setAttribute("data-theme", "dark");
     var themeSwitcher = document.getElementById("theme-switcher");
     themeSwitcher.onclick = function() {
 		themeSwitcher.style = "transform: scale(0.1)";
