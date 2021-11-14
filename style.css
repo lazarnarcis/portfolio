@@ -24,14 +24,8 @@ img {
 	content:url("imgs/dark.svg");
 	transition: transform .3s;
 }
-[data-theme="dark"] #programmer {
-	border: 3px solid white;
-}
 #programmer {
-	border: 3px solid #4bbfbd;
-	transition: transform .3s;
-	border-radius: 15px;
-	margin: 2.5px;
+	font-weight: bold;
 }
 [data-theme="dark"] #theme-switcher {
 	content:url("imgs/light.svg");
