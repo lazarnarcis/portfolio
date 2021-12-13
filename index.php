@@ -38,6 +38,8 @@
 		} 
 		if ($mail->Send()) {
 			$err = "Message has been sent!";
+			header('Location: index.php');
+			exit();
 		}
 	}
 ?>
