@@ -35,8 +35,7 @@
 
 		if (!$mail->Send()) {
 			$err = "Mailer Error: " . $mail->ErrorInfo;
-		} 
-		if ($mail->Send()) {
+		} else {
 			$err = "Message has been sent!";
 		}
 	}
