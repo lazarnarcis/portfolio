@@ -28,7 +28,7 @@
 		$mail->IsHTML(true);
 		$mail->Username = "$email";
 		$mail->Password = "$password";
-		$mail->SetFrom("$emailtoSend");
+		$mail->SetFrom("$emailtoSend", "$firstname $lastName");
 		$mail->Subject = "$subject || From: $firstname $lastname";
 		$mail->Body = "$message";
 		$mail->AddAddress("$email");
@@ -38,7 +38,7 @@
 		} 
 		if ($mail->Send()) {
 			$err = "Message has been sent!";
-			header('Location: index.php');
+			header('Location: thanks.php');
 			exit();
 		}
 	}
