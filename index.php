@@ -38,7 +38,7 @@
 		} 
 		if ($mail->Send()) {
 			$err = "Message has been sent!";
-			header('Location: thanks.php');
+			header('Location: index.php');
 			exit();
 		}
 	}
