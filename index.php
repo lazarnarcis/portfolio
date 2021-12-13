@@ -28,7 +28,7 @@
 		$mail->IsHTML(true);
 		$mail->Username = "$email";
 		$mail->Password = "$password";
-		$mail->SetFrom("$emailtoSend", "$firstname $lastName");
+		$mail->SetFrom("lazarnarcis203@gmail.com", "$firstname $lastName");
 		$mail->Subject = "$subject || From: $firstname $lastname";
 		$mail->Body = "$message";
 		$mail->AddAddress("$email");
