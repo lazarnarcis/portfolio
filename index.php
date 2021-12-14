@@ -48,19 +48,18 @@
 		$mail->Body = "$message";
 		$mail->AddAddress("$email");
 
-		if (!$mail->Send()) {
-			$err = "Mailer Error: " . $mail->ErrorInfo;
-		} 
-		if ($mail->Send()) {
-			$link = mysqli_connect($host_db, $username_db, $password_db, $database_db);
-			if ($link === false) {
-				die("ERROR! Could not connect to database!");
+		if (isset($message) && isset($subject) & isset($emailtoSend) & isset($lastname) & isset($firstname)) {
+			if (!$mail->Send()) {
+				$err = "Mailer Error: " . $mail->ErrorInfo;
+			} else {
+				$link = mysqli_connect($host_db, $username_db, $password_db, $database_db);
+				if ($link === false) {
+					die("ERROR! Could not connect to database!");
+				}
+				$sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
+				mysqli_query($link, $sql);
+				$err = "Message has been sent!";
 			}
-			$sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
-			mysqli_query($link, $sql);
-			$err = "Message has been sent!";
-			header('Location: index.php');
-			exit();
 		}
 	}
 ?>
