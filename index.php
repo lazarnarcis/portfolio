@@ -27,11 +27,11 @@
 	require 'PHPMailer-master/src/SMTP.php';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$firstname = $_POST['firstname'];
-		$lastname = $_POST['lastname'];
-		$emailtoSend = $_POST['email'];
-		$subject = $_POST['subject'];
-		$message = $_POST['message'];
+		$firstname = htmlspecialchars($_POST['firstname']);
+		$lastname = htmlspecialchars($_POST['lastname']);
+		$emailtoSend = htmlspecialchars($_POST['email']);
+		$subject = htmlspecialchars($_POST['subject']);
+		$message = htmlspecialchars($_POST['message']);
 
 		$mail = new PHPMailer(); // create a new object
 		$mail->IsSMTP(); // enable SMTP
