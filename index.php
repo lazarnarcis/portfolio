@@ -349,7 +349,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<a href="https://github.com/lazarnarcis" target="_blank" title="Github"><img src="imgs/github.svg" id="github-i" class="link-images"></a>
 			<a href="https://www.reddit.com/u/narcis340" target="_blank" title="Reddit"><img src="imgs/reddit.svg" id="reddit-i" class="link-images"></a>
 			<a href="https://www.facebook.com/narcis2003/" target="_blank" title="Facebook"><img src="imgs/facebook.svg" id="facebook-i" class="link-images"></a>
-			<a href="https://instagram.com/narcis.203/" target="_blank" title="Instagram"><img src="imgs/instagram.svg" id="instagram-i" class="link-images"></a>
+			<a href="https://instagram.com/lnarcis310/" target="_blank" title="Instagram"><img src="imgs/instagram.svg" id="instagram-i" class="link-images"></a>
 		</div>
 	</footer>
 	<div id="errs">
