@@ -204,7 +204,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<div id="content-of-projects">
 				<div class="align-items-of-div">
 					<img src="imgs/chat-logo.png" alt="Chat Logo" id="project-logo">
-					<b><span>Live Chat</span></b>
+					<b><span>Live Chat (PHP)</span></b>
 				</div>
 				<div id="description-skills">
 					<span>This is a <b>mini social platform</b>. You can chat in general with anyone you want and change your profile picture at any time. This project took a long time to complete. You can set your email address, bio and many other very nice things.
