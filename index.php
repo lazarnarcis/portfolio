@@ -74,7 +74,7 @@
 	<title>Narcis || Web Developer</title>
 	<link rel="icon" href="imgs/website-logo.jpg">
 	<script src="jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
@@ -356,6 +356,6 @@ When it comes to databases I use SQL, Firebase.</span>
 		<p id="form-err"></p>
 		<button onclick="closeError();" id="button-errors">Cancel</button>
 	</div>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
