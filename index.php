@@ -7,24 +7,10 @@
 	$email = getenv('GMAIL_EMAIL');
 	$password = getenv('GMAIL_PASSWORD');
 
-	$whitelist = array(
-		'127.0.0.1',
-		'::1'
-	);
-	if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
-		$username_db = getenv("username_db");
-		$password_db = getenv("password_db");
-		$host_db = getenv("host_db");
-		$database_db = getenv("database_db");
-	} else {
-		$username_db = "root";
-		$password_db = "";
-		$database_db = "emails";
-		$host_db = "localhost";
-	}
 	require 'PHPMailer-master/src/Exception.php';
 	require 'PHPMailer-master/src/PHPMailer.php';
 	require 'PHPMailer-master/src/SMTP.php';
+	require 'config.php';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$firstname = htmlspecialchars($_POST['firstname']);
@@ -52,7 +38,6 @@
 			if (!$mail->Send()) {
 				$err = "Mailer Error: " . $mail->ErrorInfo;
 			} else {
-				$link = mysqli_connect($host_db, $username_db, $password_db, $database_db);
 				if ($link === false) {
 					die("ERROR! Could not connect to database!");
 				}
