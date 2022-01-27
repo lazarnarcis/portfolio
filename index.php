@@ -34,7 +34,7 @@
 		$mail->Body = "$message";
 		$mail->AddAddress("$email");
 
-		if (isset($message) && isset($subject) & isset($emailtoSend) & isset($lastname) & isset($firstname)) {
+		if (isset($message) && isset($subject) && isset($emailtoSend) && isset($lastname) && isset($firstname)) {
 			if (!$mail->Send()) {
 				$err = "Mailer Error: " . $mail->ErrorInfo;
 			} else {
