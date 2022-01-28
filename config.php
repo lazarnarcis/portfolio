@@ -12,7 +12,7 @@
     } else {
         $username_db = "root";
         $password_db = "";
-        $database_db = "emails";
+        $database_db = "portfolio";
         $host_db = "localhost";
     }
 
