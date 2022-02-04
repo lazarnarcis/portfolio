@@ -126,6 +126,7 @@
 				<img src="imgs/jquery.png" alt="jQuery" id="language" title="jQuery">
 				<img src="imgs/bootstrap.png" alt="Bootstrap" id="language" title="Bootstrap">
 				<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
+				<img src="imgs/json.png" alt="JSON" id="language" title="JSON">
 			</div>
 		</div>
 		<div id="content-of-project">
@@ -144,7 +145,6 @@ When it comes to databases I use SQL, Firebase.</span>
 				<img src="imgs/express.png" alt="Express" id="language" title="Express JS">
 				<img src="imgs/nodejs.png" alt="Node JS" id="language" title="Node JS">
 				<img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase">
-				<img src="imgs/json.png" alt="JSON" id="language" title="JSON">
 			</div>
 		</div>
 		<div id="content-of-project">
