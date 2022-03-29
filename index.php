@@ -181,7 +181,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			</div>
 		</div>
 		<div class="new-teqhnc"><span>Technologies I am currently learning:</span>
-<img src="imgs/vue.png" alt="Vue" id="language" title="Vue"> <img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase"> <img src="imgs/linux.png" alt="Linux" id="language" title="Linux"></div>
+<img src="imgs/vue.png" alt="Vue" id="language" title="Vue"> <img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase"> <img src="imgs/linux.png" alt="Linux" id="language" title="Linux"> <img src="imgs/typescript.png" alt="Typescript" id="language" title="Typescript"></div>
 	</div>
 	<div id="projects">
 		<h3>Projects</h3>
