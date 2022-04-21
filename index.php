@@ -4,9 +4,6 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
-	$email = getenv('GMAIL_EMAIL');
-	$password = getenv('GMAIL_PASSWORD');
-
 	require 'PHPMailer-master/src/Exception.php';
 	require 'PHPMailer-master/src/PHPMailer.php';
 	require 'PHPMailer-master/src/SMTP.php';
@@ -24,7 +21,7 @@
 		$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 		$mail->SMTPAuth = true; // authentication enabled
 		$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-		$mail->Host = "smtp.gmail.com";
+		$mail->Host = "mail.lazarnarcis.ro";
 		$mail->Port = 465; // or 587
 		$mail->IsHTML(true);
 		$mail->Username = "$email";
@@ -47,6 +44,7 @@
 			}
 		}
 	}
+	mysqli_close($link);
 ?>
 <!DOCTYPE html>
 <html>
