@@ -94,24 +94,20 @@ span.onclick = function() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    var themeSwitcher = document.getElementById("theme-switcher");
-    themeSwitcher.onclick = function() {
-		themeSwitcher.style = "transform: scale(0.1)";
-		var currentTheme = document.documentElement.getAttribute("data-theme");
-		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
-		document.documentElement.setAttribute("data-theme", switchToTheme);
-		setTimeout(function() {
-			themeSwitcher.style = "transform: scale(1)";
-		}, 300);
-    }
+	var themeSwitcher = document.getElementById("theme-switcher");
 	var themeSwitchers = document.getElementById("theme-switchers");
-    themeSwitchers.onclick = function() {
-		themeSwitchers.style = "transform: scale(0.1)";
+	changeTheme(themeSwitcher);
+	changeTheme(themeSwitchers);
+});
+
+function changeTheme (element) {
+    element.onclick = function() {
+		element.style = "transform: scale(0.1)";
 		var currentTheme = document.documentElement.getAttribute("data-theme");
 		var switchToTheme = currentTheme === "dark" ? "light" : "dark";
 		document.documentElement.setAttribute("data-theme", switchToTheme);
 		setTimeout(function() {
-			themeSwitchers.style = "transform: scale(1)";
+			element.style = "transform: scale(1)";
 		}, 300);
     }
-});
+}
