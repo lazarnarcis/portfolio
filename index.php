@@ -324,7 +324,7 @@ When it comes to databases I use SQL, Firebase.</span>
 		<textarea type="text" id="message" name="message" placeholder="I want a website..." required></textarea>
 		<span style="text-align: center"><?php echo $err; ?></span>
 		<div class="contact-email"><input id="submit" type="submit" value="Submit" />
-		<span>or send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a>.</span></div>
+		<span>or send email at <a href="mailto:contact@lazarnarcis.ro" id="link-to-project">contact@lazarnarcis.ro</a>.</span></div>
 	</form>
 	<footer>
 		<span id="footer-content"></span>
