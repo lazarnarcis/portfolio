@@ -23,7 +23,7 @@
     $mail->IsHTML(true);
     $mail->Username = "$email";
     $mail->Password = "$password";
-    $mail->SetFrom("$emailtoSend", "$firstname $lastName");
+    $mail->SetFrom("$emailtoSend", "$firstname $lastname");
     $mail->Subject = "$subject || From: $firstname $lastname - $emailtoSend";
     $mail->Body = "$message";
     $mail->AddAddress("$email");
@@ -34,7 +34,7 @@
         } else {
             $sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
             mysqli_query($link, $sql);
-            echo "The email has been sent!";
+            echo "The email has been sent! Thank you :)";
         }
     }
     mysqli_close($link);
