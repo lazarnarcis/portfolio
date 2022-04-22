@@ -12,6 +12,21 @@ function closeError() {
 	let error = document.getElementById("errs");
 	error.style = "transform: scale(0)";
 }
+document.querySelector("#firstname").addEventListener("click", function() {
+	errs.style = "transform: scale(0);";
+});
+document.querySelector("#lastname").addEventListener("click", function() {
+	errs.style = "transform: scale(0);";
+});
+document.querySelector("#email").addEventListener("click", function() {
+	errs.style = "transform: scale(0);";
+});
+document.querySelector("#subject").addEventListener("click", function() {
+	errs.style = "transform: scale(0);";
+});
+document.querySelector("#message").addEventListener("click", function() {
+	errs.style = "transform: scale(0);";
+});
 typeText();
 let footer = document.getElementById('footer-content');
 let presentYear = new Date().getFullYear();
