@@ -372,10 +372,9 @@ h3 {
 }
 #button-errors {
 	float: right;
-	margin-top: 12.5px;
 	background: rgb(211, 211, 211);
 	border: none;
-	border-radius: 20px;
+	border-radius: 5px;
 	padding: 5px;
 	cursor: pointer;
 	transition: all .3s;
@@ -403,6 +402,9 @@ h3 {
 	z-index: 99;
 	transition: transform .5s ease-in;
 	box-shadow: 0 0 1px black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 [data-theme="dark"] #errs {
 	background-color: rgba(0, 0, 0, 0.75);
