@@ -34,7 +34,7 @@
         } else {
             $sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
             mysqli_query($link, $sql);
-            echo "The email has been sent! Thank you :)";
+            echo "The email has been sent! Thank you :) You will receive an answer as soon as possible!";
         }
     }
     mysqli_close($link);
