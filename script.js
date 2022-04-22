@@ -8,28 +8,11 @@ function typeText() {
 		setTimeout(typeText, speed);
 	}
 }
-typeText();
-function submitForm() {
-	let input1 = document.getElementById("firstname").value;
-	let input2 = document.getElementById("lastname").value;
-	let input3 = document.getElementById("email").value;
-	let input4 = document.getElementById("subject").value;
-	let input5 = document.getElementById("message").value;
-	let errs = document.getElementById("errs");
-	let textErrs = document.getElementById("form-err");
-	if (input1 === "" || input2 === "" || input3 === "" || input4 === "" || input5 === "") {
-		textErrs.innerHTML = "Please fill in all the data entered!";
-		errs.style = "transform: scale(1);";
-	} else {
-		textErrs.innerHTML = "The form is not valid at the moment!";
-		errs.style = "transform: scale(1);";
-	}
-}
 function closeError() {
 	let error = document.getElementById("errs");
 	error.style = "transform: scale(0)";
 }
-
+typeText();
 let footer = document.getElementById('footer-content');
 let presentYear = new Date().getFullYear();
 footer.innerHTML = "&copy; Narcis " + presentYear;

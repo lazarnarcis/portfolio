@@ -1,51 +1,3 @@
-<?php 
-	$err = "";
-
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-
-	require 'PHPMailer-master/src/Exception.php';
-	require 'PHPMailer-master/src/PHPMailer.php';
-	require 'PHPMailer-master/src/SMTP.php';
-	require 'config.php';
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$firstname = htmlspecialchars($_POST['firstname']);
-		$lastname = htmlspecialchars($_POST['lastname']);
-		$emailtoSend = htmlspecialchars($_POST['email']);
-		$subject = htmlspecialchars($_POST['subject']);
-		$message = htmlspecialchars($_POST['message']);
-
-		$mail = new PHPMailer(); // create a new object
-		$mail->IsSMTP(); // enable SMTP
-		$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
-		$mail->SMTPAuth = true; // authentication enabled
-		$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-		$mail->Host = "mail.lazarnarcis.ro";
-		$mail->Port = 465; // or 587
-		$mail->IsHTML(true);
-		$mail->Username = "$email";
-		$mail->Password = "$password";
-		$mail->SetFrom("$emailtoSend", "$firstname $lastName");
-		$mail->Subject = "$subject || From: $firstname $lastname - $emailtoSend";
-		$mail->Body = "$message";
-		$mail->AddAddress("$email");
-
-		if (isset($message) && isset($subject) && isset($emailtoSend) && isset($lastname) && isset($firstname)) {
-			if (!$mail->Send()) {
-				$err = "Mailer Error: " . $mail->ErrorInfo;
-			} else {
-				if ($link === false) {
-					die("ERROR! Could not connect to database!");
-				}
-				$sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
-				mysqli_query($link, $sql);
-				$err = "Message has been sent!";
-			}
-		}
-	}
-	mysqli_close($link);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,6 +16,56 @@
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Vollkorn&display=swap" rel="stylesheet">
+	<script>
+		$(document).ready(function() {
+			$('form').submit(function(event) {
+				event.preventDefault();
+				let data = {
+					firstname: $("#firstname").val(),
+					lastname: $("#lastname").val(),
+					email: $("#email").val(),
+					subject: $("#subject").val(),
+					message: $("#message").val()
+				};
+				let input1 = $("#firstname").val();
+				let input2 = $("#lastname").val();
+				let input3 = $("#email").val();
+				let input4 = $("#subject").val();
+				let input5 = $("#message").val();
+				let errs = document.getElementById("errs");
+				let textErrs = document.getElementById("form-err");
+
+				if (input1 == "") {
+					textErrs.innerHTML = "Please enter your first name!";
+					errs.style = "transform: scale(1);";
+				} else if (input2 == "") {
+					textErrs.innerHTML = "Please enter your last name!";
+					errs.style = "transform: scale(1);";
+				} else if (input3 == "") {
+					textErrs.innerHTML = "Please enter your email!";
+					errs.style = "transform: scale(1);";
+				} else if (input4 == "") {
+					textErrs.innerHTML = "Please enter your subject!";
+					errs.style = "transform: scale(1);";
+				} else if (input5 == "") {
+					textErrs.innerHTML = "Please enter your message!";
+					errs.style = "transform: scale(1);";
+				} else {
+					$.post('send_mail.php', data, function(html) {
+						$("#firstname").val("");
+						$("#lastname").val("");
+						$("#email").val("");
+						$("#subject").val("");
+						$("#message").val("");
+
+						textErrs.innerHTML = html;
+						errs.style = "transform: scale(1);";
+					});
+				}
+				return false;
+			});
+		});
+	</script>
 </head>
 <body id="home">
 	<a href="#"><img src="imgs/top.png" alt="Top" class="scrollToTop" /></a>
@@ -292,34 +294,34 @@ When it comes to databases I use SQL, Firebase.</span>
 			<span>The price of a project differs depending on your opportunities and preferences. Below you will find different ways to contact me.</span>
 		</p>
 	</div>
-	<form id="contact" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+	<form id="contact">
 		<h3>Contact</h3>
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>
 		<label for="firstname" class="align-items-of-div">
 			<img src="imgs/firstname.svg" alt="First Name" id="email-logo">
 			<span>First Name</span>
 		</label>
-		<input type="text" id="firstname" name="firstname" placeholder="Your First Name" required>
+		<input type="text" id="firstname" placeholder="Your First Name">
 		<label for="lastname" class="align-items-of-div">
 			<img src="imgs/lastname.svg" alt="Last Name" id="email-logo">
 			<span>Last Name</span>
 		</label>
-		<input type="text" id="lastname" name="lastname" placeholder="Your Last Name" required>
+		<input type="text" id="lastname" placeholder="Your Last Name">
 		<label for="email" class="align-items-of-div">
 			<img src="imgs/email.svg" alt="Email" id="email-logo">
 			<span>Email</span>
 		</label>
-		<input type="email" id="email" name="email" placeholder="username@domain.com" required>
+		<input type="email" id="email" placeholder="username@domain.com">
 		<label for="subject" class="align-items-of-div">
 			<img src="imgs/subject.svg" alt="Subject" id="email-logo">
 			<span>Subject</span>
 		</label>
-		<input type="text" id="subject" name="subject" placeholder="Web App" required>
+		<input type="text" id="subject" placeholder="Web App">
 		<label for="message" class="align-items-of-div">
 			<img src="imgs/message.svg" alt="Message" id="email-logo">
 			<span>Message</span>
 		</label>
-		<textarea type="text" id="message" name="message" placeholder="I want a website..." required></textarea>
+		<textarea type="text" id="message" placeholder="I want a website..."></textarea>
 		<span style="text-align: center"><?php echo $err; ?></span>
 		<div class="contact-email"><input id="submit" type="submit" value="Submit" />
 		<span>or send email at <a href="mailto:contact@lazarnarcis.ro" id="link-to-project">contact@lazarnarcis.ro</a>.</span></div>
