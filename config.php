@@ -17,7 +17,7 @@
     }
 
     $email = getenv('GMAIL_EMAIL');
-	$password = getenv('GMAIL_PASSWORD');
+    $password = getenv('GMAIL_PASSWORD');
 
     $link = mysqli_connect($host_db, $username_db, $password_db, $database_db);
     if (!$link) {
