@@ -6,8 +6,8 @@ This is my personal website where I present more details about me. (skills, proj
 
 The programming languages used for this project are: <b>html</b>, <b>css</b>, <b>javascript (es6+)</b> and <b>jquery</b>.
 
-Link to app: https://portfolio-narcis.herokuapp.com/
+Link to app: https://lazarnarcis.ro
 
 <hr>
 
-<p align="center">This project is made by <a href="https://lazarnarcis.github.io">Narcis</a></p>
+<p align="center">This project is made by <a href="https://lazarnarcis.ro">Narcis</a></p>
