@@ -55,6 +55,11 @@
 				$('html, body').animate({scrollTop : 0},800);
 				return false;
 			});
+			$(document).on("keyup", function(event) {
+				if (event.key === "Escape") {
+					errs.style = "transform: scale(0);";
+				}
+			});
 			$('form').submit(function(event) {
 				event.preventDefault();
 				let data = {
