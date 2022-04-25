@@ -7,7 +7,7 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 	<meta name="description" content="Hello! My name is Narcis Lazar, I am a web developer and I started web programming in 7th grade (2017).">
 	<title>Narcis || Web Developer</title>
-	<link rel="icon" href="imgs/website-logo.jpg">
+	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
