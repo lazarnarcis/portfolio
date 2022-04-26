@@ -362,7 +362,7 @@ When it comes to databases I use SQL, Firebase.</span>
 			<img src="imgs/email.svg" alt="Email" id="email-logo">
 			<span>Email</span>
 		</label>
-		<input type="email" id="email" placeholder="username@domain.com">
+		<input type="text" id="email" placeholder="username@domain.com">
 		<label for="subject" class="align-items-of-div">
 			<img src="imgs/subject.svg" alt="Subject" id="email-logo">
 			<span>Subject</span>
