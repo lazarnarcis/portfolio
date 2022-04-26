@@ -81,12 +81,12 @@
 				let errs = document.getElementById("errs");
 				let textErrs = document.getElementById("form-err");
 
-				let validateEmail = validateEmail(input3);
+				let validateEmailvar = validateEmail(input3);
 
 				if (input1 == "") {
 					textErrs.innerHTML = "Please enter your first name!";
 					errs.style = "transform: scale(1);";
-				} else if (validateEmail == false) {
+				} else if (validateEmailvar == false) {
 					textErrs.innerHTML = "Please enter a valid email!";
 					errs.style = "transform: scale(1);";
 				} else if (input2 == "") {
