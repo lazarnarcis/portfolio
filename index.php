@@ -77,8 +77,17 @@
 				let errs = document.getElementById("errs");
 				let textErrs = document.getElementById("form-err");
 
+				function validateEmail(email) {
+					var re = /\S+@\S+\.\S+/;
+					return re.test(email);
+				}
+				let validateEmail = validateEmail(input3);
+
 				if (input1 == "") {
 					textErrs.innerHTML = "Please enter your first name!";
+					errs.style = "transform: scale(1);";
+				} else if (validateEmail == false) {
+					textErrs.innerHTML = "Please enter a valid email!";
 					errs.style = "transform: scale(1);";
 				} else if (input2 == "") {
 					textErrs.innerHTML = "Please enter your last name!";

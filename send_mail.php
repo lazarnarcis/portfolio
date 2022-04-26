@@ -29,9 +29,7 @@
     $mail->AddAddress("$email");
 
     if (isset($message) && isset($subject) && isset($emailtoSend) && isset($lastname) && isset($firstname)) {
-        if (!filter_var($emailtoSend, FILTER_VALIDATE_EMAIL)) {
-            echo "Please enter a valid email!";
-        } else if (!$mail->Send()) {
+        if (!$mail->Send()) {
             echo "Mailer Error: " . $mail->ErrorInfo . $firstname;
         } else {
             $sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', '$firstname $lastname')";
