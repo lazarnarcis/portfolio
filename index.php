@@ -60,6 +60,10 @@
 					errs.style = "transform: scale(0);";
 				}
 			});
+			function validateEmail(email) {
+				var re = /\S+@\S+\.\S+/;
+				return re.test(email);
+			}
 			$('form').submit(function(event) {
 				event.preventDefault();
 				let data = {
@@ -77,10 +81,6 @@
 				let errs = document.getElementById("errs");
 				let textErrs = document.getElementById("form-err");
 
-				function validateEmail(email) {
-					var re = /\S+@\S+\.\S+/;
-					return re.test(email);
-				}
 				let validateEmail = validateEmail(input3);
 
 				if (input1 == "") {
