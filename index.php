@@ -244,7 +244,7 @@ When it comes to databases I use SQL, Firebase.</span>
 				</div>
 				<div id="description-skills">
 					<span>This is a <b>mini social platform</b>. You can chat in general with anyone you want and change your profile picture at any time. This project took a long time to complete. You can set your email address, bio and many other very nice things.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/chat" target="_blank" id="code-prev">Source Code</a> <a href="https://live-chat-narcis.herokuapp.com/" target="_blank" id="code-prev">Preview</a></div></span>
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/chat" target="_blank" id="code-prev">Source Code</a> <a href="https://chat.lazarnarcis.ro" target="_blank" id="code-prev">Preview</a></div></span>
 				</div>
 				<div id="languages">
 					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
