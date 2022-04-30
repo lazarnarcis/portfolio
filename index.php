@@ -86,14 +86,14 @@
 				if (input1 == "") {
 					textErrs.innerHTML = "Please enter your first name!";
 					errs.style = "transform: scale(1);";
-				} else if (validateEmailvar == false) {
-					textErrs.innerHTML = "Please enter a valid email!";
-					errs.style = "transform: scale(1);";
 				} else if (input2 == "") {
 					textErrs.innerHTML = "Please enter your last name!";
 					errs.style = "transform: scale(1);";
 				} else if (input3 == "") {
 					textErrs.innerHTML = "Please enter your email!";
+					errs.style = "transform: scale(1);";
+				} else if (validateEmailvar == false) {
+					textErrs.innerHTML = "Please enter a valid email!";
 					errs.style = "transform: scale(1);";
 				} else if (input4 == "") {
 					textErrs.innerHTML = "Please enter your subject!";
