@@ -21,4 +21,7 @@
     }
 
     $link = mysqli_connect($host_db, $username_db, $password_db, $database_db);
+    if (!$link) {
+        echo "Database error!";
+    }
 ?>
