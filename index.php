@@ -272,49 +272,17 @@ When it comes to databases I use SQL, Firebase.</span>
 			</div>
 			<div id="content-of-projects">
 				<div class="align-items-of-div">
-					<img src="imgs/box-shadow-logo.png" alt="Box Shadow Logo" id="project-logo">
-					<b><span>Box Shadow Generator</span></b>
+					<img src="imgs/speed-cube-timer.jpg" alt="Speed Cube Timer Logo" id="project-logo">
+					<b><span>Speed Cube Timer</span></b>
 				</div>
 				<div id="description-skills">
-					<span>You can use this web application to more easily generate Box Shadow CSS!
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/box-shadow-generator" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/box-shadow-generator/" target="_blank" id="code-prev">Preview</a></div></span>
+					<span>Generates algorithms, measures solving time etc. for rubik's cube.
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/speed-cube-timer" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/speed-cube-timer/" target="_blank" id="code-prev">Preview</a></div></span>
 				</div>
 				<div id="languages">
 					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
 					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
 					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
-					<img src="imgs/pug.png" alt="Pug" id="language" title="Pug">
-					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/reminder-logo.png" alt="Chat Logo" id="project-logo">
-					<b><span>Reminder</span></b>
-				</div>
-				<div id="description-skills">
-					<span>You can set a time and when it ends it will appear a message.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/reminder" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/reminder/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
-					<img src="imgs/react.png" alt="React" id="language" title="React">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="https://avatars.githubusercontent.com/u/82839799?v=4" alt="Connect Logo" id="project-logo">
-					<b><span>Connect with me</span></b>
-				</div>
-				<div id="description-skills">
-					<span>Here you will find some contact links to me.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/connect-with-narcis" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/connect-with-narcis/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/pug.png" alt="Pug" id="language" title="Pug">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
 				</div>
 			</div>
 			<div id="content-of-projects">
@@ -325,6 +293,65 @@ When it comes to databases I use SQL, Firebase.</span>
 				<div id="description-skills">
 					<span>With the help of this application you can generate a random password. You can select if you want to contain numbers, capital letters, etc.
 <div class="project-buttons"><a href="https://github.com/lazarnarcis/password-generator" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/password-generator" target="_blank" id="code-prev">Preview</a></div></span>
+				</div>
+				<div id="languages">
+					<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
+					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
+				</div>
+			</div>
+			<div id="content-of-projects">
+				<div class="align-items-of-div">
+					<img src="imgs/typing-speed-test.jpg" alt="Typing Speed Test Logo" id="project-logo">
+					<b><span>Typing speed test</span></b>
+				</div>
+				<div id="description-skills">
+					<span>You have to write a text for 60 seconds!
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/typing-speed-test" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/typing-speed-test/" target="_blank" id="code-prev">Preview</a></div></span>
+				</div>
+				<div id="languages">
+					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
+					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
+					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
+				</div>
+			</div>
+			<div id="content-of-projects">
+				<div class="align-items-of-div">
+					<img src="imgs/crud-app.jpg" alt="CRUD App Logo" id="project-logo">
+					<b><span>CRUD App</span></b>
+				</div>
+				<div id="description-skills">
+					<span>Application using CRUD. What is CRUD? (create, read, update and delete)
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/crud-app" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/crud-app/" target="_blank" id="code-prev">Preview</a></div></span>
+				</div>
+				<div id="languages">
+					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
+					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
+					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
+				</div>
+			</div>
+			<div id="content-of-projects">
+				<div class="align-items-of-div">
+					<img src="imgs/weather-app.jpg" alt="Weather App Logo" id="project-logo">
+					<b><span>Weather App</span></b>
+				</div>
+				<div id="description-skills">
+					<span>We put a certain location and receive details about the weather there.
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/weather-app" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/weather-app/" target="_blank" id="code-prev">Preview</a></div></span>
+				</div>
+				<div id="languages">
+					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
+					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
+					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
+				</div>
+			</div>
+			<div id="content-of-projects">
+				<div class="align-items-of-div">
+					<img src="imgs/calculator.png" alt="Calculator Logo" id="project-logo">
+					<b><span>Calculator App</span></b>
+				</div>
+				<div id="description-skills">
+					<span>Just a simple calculator.
+<div class="project-buttons"><a href="https://github.com/lazarnarcis/calculator" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/calculator/" target="_blank" id="code-prev">Preview</a></div></span>
 				</div>
 				<div id="languages">
 					<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
