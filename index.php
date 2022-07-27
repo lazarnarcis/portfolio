@@ -200,21 +200,6 @@ When it comes to databases I use SQL, Firebase.</span>
 		</div>
 		<div id="content-of-project">
 			<div class="align-items-of-div">
-				<img src="imgs/mobile.svg" alt="Backend" id="project-logo">
-				<b><span>Mobile</span></b>
-			</div>
-			<div id="description-skills">
-				<span>One of my favorite frameworks for creating mobile applications is React Native. I also make sure that all my websites are mobile responsive.</span>
-			</div>
-			<div id="languages">
-				<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-				<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-				<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
-				<img src="imgs/react.png" alt="React Native" id="language" title="React Native">
-			</div>
-		</div>
-		<div id="content-of-project">
-			<div class="align-items-of-div">
 				<img src="imgs/services.svg" alt="Services" id="project-logo">
 				<b><span>Services</span></b> 
 			</div>
