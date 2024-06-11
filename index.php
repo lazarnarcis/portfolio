@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-	<meta name="description" content="Hello! My name is Narcis Lazar, I am a web developer and I started web programming in 7th grade (2017).">
-	<title>Narcis || Web Developer</title>
+	<meta name="description" content="Hello! My name is Narcis Lazar, I am a full stack web developer and I started web programming in 7th grade (2017).">
+	<title>Narcis || Full Stack Web Developer</title>
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
@@ -165,7 +165,7 @@
 				<b><span>Frontend</span></b>
 			</div>
 			<div id="description-skills">
-				<span>I use Html, Css and Javascript (ES6+) to make responsive, modern and fast websites. Also, I use the following frameworks for frontend: React JS, Pug and SASS.</span>
+				<span>I create responsive, modern, and fast websites using HTML5, CSS3, and JavaScript (ES6+). For enhanced development, I utilize frameworks and tools such as React JS for dynamic interfaces, Pug for efficient HTML templating, and SASS for powerful CSS preprocessing. Additionally, I leverage Bootstrap and Tailwind CSS for streamlined, responsive design, and jQuery for simplified DOM manipulation.</span>
 			</div>
 			<div id="languages">
 				<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
@@ -178,6 +178,9 @@
 				<img src="imgs/bootstrap.png" alt="Bootstrap" id="language" title="Bootstrap">
 				<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
 				<img src="imgs/json.png" alt="JSON" id="language" title="JSON">
+				<img src="imgs/vue.png" alt="Vue" id="language" title="Vue">
+				<img src="imgs/typescript.png" alt="Typescript" id="language" title="Typescript">
+				<img src="imgs/tailwind.png" alt="Tailwind" id="language" title="Tailwind">
 			</div>
 		</div>
 		<div id="content-of-project">
@@ -186,8 +189,9 @@
 				<b><span>Backend</span></b>
 			</div>
 			<div id="description-skills">
-				<span>My first language that helped me learn backend was <b>PHP</b>. After that, I learned NodeJS and ExpressJS which are frameworks for Javascript.
-When it comes to databases I use SQL, Firebase.</span>
+				<span>My journey into backend development began with PHP, a powerful scripting language for web development. With PHP, I explored various frameworks such as Laravel, CodeIgniter, and Symfony, each offering unique features for building robust applications. To expand my skills, I ventured into JavaScript and its powerful runtime environment, Node.js, which allows for server-side scripting. Utilizing Express.js, a minimal and flexible Node.js web application framework, I developed efficient and scalable web applications.
+
+Typescript has also been a valuable addition, bringing static typing to JavaScript and enhancing my coding experience in larger projects. For database management, I rely on SQL, leveraging its structured query language to interact with relational databases efficiently and effectively.</span>
 			</div>
 			<div id="languages">
 				<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
@@ -195,7 +199,30 @@ When it comes to databases I use SQL, Firebase.</span>
 				<img src="imgs/sql.png" alt="SQL" id="language" title="SQL">
 				<img src="imgs/express.png" alt="Express" id="language" title="Express JS">
 				<img src="imgs/nodejs.png" alt="Node JS" id="language" title="Node JS">
-				<img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase">
+				<img src="imgs/typescript.png" alt="Typescript" id="language" title="Typescript">
+				<img src="imgs/laravel.png" alt="Laravel" id="language" title="Laravel">
+				<img src="imgs/codeigniter.png" alt="Codeigniter" id="language" title="Codeigniter">
+				<img src="imgs/symfony.png" alt="Symfony" id="language" title="Symfony">
+			</div>
+		</div>
+		<div id="content-of-project">
+			<div class="align-items-of-div">
+				<img src="imgs/devops.svg" alt="DevOps" id="project-logo">
+				<b><span>DevOps</span></b> 
+			</div>
+			<div id="description-skills">
+				<span>I specialize in DevOps practices aimed at enhancing the efficiency and reliability of software development and deployment processes. My approach involves integrating automation and continuous improvement strategies to streamline workflows and ensure seamless delivery of applications.With a focus on optimizing infrastructure and leveraging cloud services, I implement robust version control with tools like Git and efficient collaboration through platforms like Gitlab. Proficient in Linux environments, I manage servers and deploy applications, utilizing scripting languages such as Shell for task automation.
+
+Additionally, I secure web applications with SSL certificates from Let's Encrypt and manage web server configurations, notably with Apache. My experience extends to leveraging cloud hosting solutions, including OVH, to scale infrastructure effectively and support business growth.</span>
+			</div>
+			<div id="languages">
+				<img src="imgs/git.png" alt="Git" id="language" title="Git">
+				<img src="imgs/gitlab.png" alt="Gitlab" id="language" title="Gitlab">
+				<img src="imgs/letsencrypt.png" alt="Let's Encrypt" id="language" title="Let's Encrypt">
+				<img src="imgs/linux.png" alt="Linux" id="language" title="Linux">
+				<img src="imgs/ovh.png" alt="OVH" id="language" title="OVH">
+				<img src="imgs/shell.png" alt="Shell" id="language" title="Shell">
+				<img src="imgs/apache.png" alt="Apache" id="language" title="Apache">
 			</div>
 		</div>
 		<div id="content-of-project">
@@ -204,20 +231,16 @@ When it comes to databases I use SQL, Firebase.</span>
 				<b><span>Services</span></b> 
 			</div>
 			<div id="description-skills">
-				<span>I use different services and technologies. The most used technology by me is PHPMailer; with its help, I can easily send an e-mail to anyone. I use XAMPP to run .php files on localhost. XAMPP is one of the most popular PHP development environments. I also often use Git to implement various things on Github.</span>
+				<span>APIs are crucial for the dynamic functionality of any website. With proper documentation, I can integrate and use any API.</span>
 			</div>
 			<div id="languages">
 				<img src="imgs/phpmailer.jpg" alt="PHPMailer" id="language" title="PHPMailer">
-				<img src="imgs/xampp.png" alt="XAMPP" id="language" title="XAMPP">
-				<img src="imgs/git.png" alt="Git" id="language" title="Git">
 				<img src="imgs/npm.png" alt="NPM" id="language" title="NPM">
-				<img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase">
-				<img src="imgs/filezilla.png" alt="FileZilla" id="language" title="FileZilla">
-				<img src="imgs/netlify.png" alt="Netlify" id="language" title="Netlify">
+				<img src="imgs/google.jpg" alt="Google" id="language" title="Google">
+				<img src="imgs/fontawesome.png" alt="Font Awesome" id="language" title="Font Awesome">
+				<img src="imgs/select2.png" alt="Select2" id="language" title="Select2">
 			</div>
 		</div>
-		<div class="new-teqhnc"><span>Technologies I am currently learning:</span>
-<img src="imgs/vue.png" alt="Vue" id="language" title="Vue"> <img src="imgs/firebase.png" alt="Firebase" id="language" title="Firebase"> <img src="imgs/linux.png" alt="Linux" id="language" title="Linux"> <img src="imgs/typescript.png" alt="Typescript" id="language" title="Typescript"></div>
 	</div>
 	<div id="projects">
 		<h3>Projects</h3>
@@ -286,51 +309,6 @@ When it comes to databases I use SQL, Firebase.</span>
 			</div>
 			<div id="content-of-projects">
 				<div class="align-items-of-div">
-					<img src="imgs/typing-speed-test.jpg" alt="Typing Speed Test Logo" id="project-logo">
-					<b><span>Typing speed test</span></b>
-				</div>
-				<div id="description-skills">
-					<span>You have to write a text for 60 seconds!
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/typing-speed-test" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/typing-speed-test/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/crud-app.jpg" alt="CRUD App Logo" id="project-logo">
-					<b><span>CRUD App</span></b>
-				</div>
-				<div id="description-skills">
-					<span>Application using CRUD. What is CRUD? (create, read, update and delete)
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/crud-app" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/crud-app/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/weather-app.jpg" alt="Weather App Logo" id="project-logo">
-					<b><span>Weather App</span></b>
-				</div>
-				<div id="description-skills">
-					<span>We put a certain location and receive details about the weather there.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/weather-app" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/weather-app/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
 					<img src="imgs/calculator.png" alt="Calculator Logo" id="project-logo">
 					<b><span>Calculator App</span></b>
 				</div>
@@ -351,9 +329,24 @@ When it comes to databases I use SQL, Firebase.</span>
 			<h3 id="about-me">About me</h3>
 		</div>
 		<p id="text-about">
-			<span id="about-me-description">Hello. My name is Narcis Lazar, I am a <span id="programmer">web developer</span>, I live in Romania and I started with web programming in 2017. <a href="https://w3schools.com" target="_blank" id="link-to-project">W3Schools</a> was the site that taught me the basics of programming, I recommend it with confidence. I started by learning HTML, CSS and Javascript at a decent level and then I also started learning PHP. After that, I focused more on Express JS and Node JS. I started learning backend (at a more advanced level) in 2020 and now I continue to learn. For frontend development I use React JS, Pug and Sass.</span>
-			<span id="first-description">If you want to see all my projects, you can access my Github account by clicking <a href="https://github.com/lazarnarcis" target="_blank" id="link-to-project">here</a>.</span>
-			<span id="price-text">Price</span>
+			<span id="about-me-description">
+				Hello! I'm <i>Narcis Lazar</i>, a <span id="programmer">full stack web developer</span> based in Romania, with a journey that began in 2017 with HTML, CSS, and JavaScript. <a href="https://w3schools.com" target="_blank" id="link-to-project">W3Schools</a> played a crucial role in grounding my programming fundamentals, and I highly recommend it for beginners.<br><br>
+				Over time, I've gained expertise in a variety of technologies and frameworks:
+				<ul>
+					<li>In backend development, I initially specialized in PHP and have worked extensively with frameworks such as:</li>
+					<ul>
+						<li><b>Laravel</b>: I've utilized Laravel for building modern web applications, appreciating its elegant architecture and scalability.</li>
+						<li><b>CodeIgniter</b>: I've employed CodeIgniter for projects requiring performance and flexibility in rapid web application development.</li>
+						<li><b>Symfony</b>: I've explored Symfony for complex projects, valuing its modularity and robustness in enterprise application development.</li>
+					</ul>
+					<li>Simultaneously, I've advanced in frontend development using React JS for dynamic, interactive interfaces, alongside Pug for efficient HTML templating and Sass for organized CSS styling management.
+					</li>
+					<li>In the realm of DevOps, I focus on automating and optimizing development and deployment workflows, employing modern practices and tools to ensure efficiency and reliability.</li>
+				</ul>
+				I have a strong background in using Git for version control and effective team collaboration, ensuring streamlined project management.<br>
+				You can explore my projects and contributions on my GitHub profile <a href="https://github.com/lazarnarcis" target="_blank" id="link-to-project">here</a>.
+			</span><br>
+			<span id="price-text">Price</span><br>
 			<span>The price of a project differs depending on your opportunities and preferences. Below you will find different ways to contact me.</span>
 		</p>
 	</div>
@@ -386,7 +379,7 @@ When it comes to databases I use SQL, Firebase.</span>
 		</label>
 		<textarea type="text" id="message" placeholder="I want a website..."></textarea>
 		<div class="contact-email"><input id="submit" type="submit" value="Submit" />
-		<span>send email at <a href="mailto:contact@lazarnarcis.ro" id="link-to-project">contact@lazarnarcis.ro</a> or <a href="tel:+40724947480" id="link-to-project">call me</a>.</span></div>
+		<span>send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a> or <a href="tel:+40770759378" id="link-to-project">call me</a>.</span></div>
 	</form>
 	<footer>
 		<span id="footer-content"></span>
@@ -402,6 +395,19 @@ When it comes to databases I use SQL, Firebase.</span>
 	<div id="errs">
 		<p id="form-err"></p>
 		<button onclick="closeError();" id="button-errors">Cancel</button>
+	</div>
+	<?php
+	$lastCommitTimestamp = exec('git log -1 --format=%at');
+	$lastCommitDate = date('Y-m-d H:i:s', $lastCommitTimestamp);
+	$currentBranch = exec('git rev-parse --abbrev-ref HEAD');
+	$lastCommitId = exec('git log -1 --format=%h');
+	?>
+	<div class="bottom-right-div">
+		<div class="main-footer" style="padding: 5px;">
+			<b>Version</b>: <?=$currentBranch?> 
+			<b>ID</b>: <?=$lastCommitId;?> 
+			<b>Date</b>: <?=$lastCommitDate?>
+		</div>          
 	</div>
 	<script type="text/javascript" src="script.js?v=<?php echo time(); ?>"></script>
 </body>
