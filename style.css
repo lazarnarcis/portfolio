@@ -792,5 +792,14 @@ h3, #about-me {
 }
 
 [data-theme="dark"] .bottom-right-div {
-  background: rgb(68, 68, 68);
+  background: rgb(84, 84, 84);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
