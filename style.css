@@ -781,7 +781,6 @@ h3, #about-me {
 
 /*# sourceMappingURL=style.css.map */
 
-
 .bottom-right-div {
   position: fixed;
   right: 0;
@@ -789,6 +788,7 @@ h3, #about-me {
   border: 0.5px solid grey;
   background: rgb(187, 187, 187);
   border-top-left-radius: 15px;
+  display: none;
 }
 
 [data-theme="dark"] .bottom-right-div {

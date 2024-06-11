@@ -48,8 +48,10 @@
 			$(window).scroll(function(){
 				if ($(this).scrollTop() > 150) {
 					$('.scrollToTop').fadeIn();
+					$('.bottom-right-div').fadeIn();
 				} else {
 					$('.scrollToTop').fadeOut();
+					$('.bottom-right-div').fadeOut();
 				}
 			});
 			$('.scrollToTop').click(function(){
