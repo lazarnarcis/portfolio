@@ -119,7 +119,7 @@ body {
   height: 25px;
   width: 25px;
   position: fixed;
-  bottom: 10px;
+  bottom: 35px;
   right: 10px;
   border-radius: 50%;
   background: #bababa;
@@ -787,4 +787,10 @@ h3, #about-me {
   right: 0;
   bottom: 0;
   border: 0.5px solid grey;
+  background: rgb(187, 187, 187);
+  border-top-left-radius: 15px;
+}
+
+[data-theme="dark"] .bottom-right-div {
+  background: rgb(68, 68, 68);
 }
