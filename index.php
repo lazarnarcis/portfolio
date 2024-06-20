@@ -1,3 +1,4 @@
+<?php require 'config.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -338,6 +339,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 				<img src="imgs/gitlab.png" alt="Gitlab" id="language" title="Gitlab">
 				<img src="imgs/letsencrypt.png" alt="Let's Encrypt" id="language" title="Let's Encrypt">
 				<img src="imgs/linux.png" alt="Linux" id="language" title="Linux">
+				<img src="imgs/npm.png" alt="NPM" id="language" title="NPM">
 				<img src="imgs/ovh.png" alt="OVH" id="language" title="OVH">
 				<img src="imgs/shell.png" alt="Shell" id="language" title="Shell">
 				<img src="imgs/apache.png" alt="Apache" id="language" title="Apache">
@@ -353,7 +355,6 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			</div>
 			<div id="languages">
 				<img src="imgs/phpmailer.jpg" alt="PHPMailer" id="language" title="PHPMailer">
-				<img src="imgs/npm.png" alt="NPM" id="language" title="NPM">
 				<img src="imgs/google.jpg" alt="Google" id="language" title="Google">
 				<img src="imgs/fontawesome.png" alt="Font Awesome" id="language" title="Font Awesome">
 				<img src="imgs/select2.png" alt="Select2" id="language" title="Select2">
@@ -363,82 +364,43 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 	<div id="projects">
 		<h3>Projects</h3>
 		<div id="project-of">
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/chat-logo.png" alt="Chat Logo" id="project-logo">
-					<b><span>Live Chat (PHP)</span></b>
-				</div>
-				<div id="description-skills">
-					<span>This is a <b>mini social platform</b>. You can chat in general with anyone you want and change your profile picture at any time. This project took a long time to complete. You can set your email address, bio and many other very nice things.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/chat" target="_blank" id="code-prev">Source Code</a> <a href="https://chat.lazarnarcis.ro" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
-					<img src="imgs/php.png" alt="PHP" id="language" title="PHP">
-					<img src="imgs/sql.png" alt="SQL" id="language" title="SQL">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/website-logo.jpg" alt="Chat Logo" id="project-logo">
-					<b><span>Portfolio Website</span></b>
-				</div>
-				<div id="description-skills">
-					<span>It's the website you're seeing now. I recommend the dark mode.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/lazarnarcis.github.io" target="_blank" id="code-prev">Source Code</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
-					<img src="imgs/jquery.png" alt="jQuery" id="language" title="jQuery">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/speed-cube-timer.jpg" alt="Speed Cube Timer Logo" id="project-logo">
-					<b><span>Speed Cube Timer</span></b>
-				</div>
-				<div id="description-skills">
-					<span>Generates algorithms, measures solving time etc. for rubik's cube.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/speed-cube-timer" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/speed-cube-timer/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/html5.png" alt="HTML5" id="language" title="HTML5">
-					<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
-					<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript (ES6+)">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="https://github.com/lazarnarcis/password-generator/blob/master/public/password-logo.png?raw=true" alt="Password Generator Logo" id="project-logo">
-					<b><span>Password Generator</span></b>
-				</div>
-				<div id="description-skills">
-					<span>With the help of this application you can generate a random password. You can select if you want to contain numbers, capital letters, etc.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/password-generator" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/password-generator" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
-					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
-				</div>
-			</div>
-			<div id="content-of-projects">
-				<div class="align-items-of-div">
-					<img src="imgs/calculator.png" alt="Calculator Logo" id="project-logo">
-					<b><span>Calculator App</span></b>
-				</div>
-				<div id="description-skills">
-					<span>Just a simple calculator.
-<div class="project-buttons"><a href="https://github.com/lazarnarcis/calculator" target="_blank" id="code-prev">Source Code</a> <a href="https://lazarnarcis.github.io/calculator/" target="_blank" id="code-prev">Preview</a></div></span>
-				</div>
-				<div id="languages">
-					<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
-					<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
-				</div>
-			</div>
+			<?php
+				$sql = "select * from projects;";
+				$result = mysqli_query($link, $sql);
+				$projects = [];
+				if ($result) {
+					while ($row = mysqli_fetch_assoc($result)) {
+						$projects[] = $row;
+					}
+				}
+				if (count($projects)) {
+					foreach ($projects as $project) {
+						?>
+							<div id="content-of-projects">
+								<div class="align-items-of-div">
+									<img src="<?php echo $project['logo']; ?>" alt="<?php echo $project['name']; ?> Logo" id="project-logo">
+									<b><span><?php echo $project['name']; ?></span></b>
+								</div>
+								<div id="description-skills">
+									<span><?php echo $project['description']; ?>
+				<div class="project-buttons"><a href="<?php echo $project['source']; ?>" target="_blank" id="code-prev">Source Code</a> <?php if($project['preview']) { ?><a href="<?php echo $project['preview']; ?>" target="_blank" id="code-prev">Preview</a> <?php } ?></div></span>
+								</div>
+								<div id="languages">
+									<?php $langs = json_decode($project['languages']); 
+										if (count($langs)) {
+											foreach ($langs as $lang) {
+												?>
+													<img src="imgs/<?=$lang?>" alt="<?=$lang?>" id="language" title="<?=$lang?>">
+												<?php
+											}
+										}
+									?>
+								</div>
+							</div>
+						<?php
+					}
+				}
+			?>
 		</div>
 	</div>
 	<div id="about">
