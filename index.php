@@ -383,7 +383,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 								</div>
 								<div id="description-skills">
 									<span><?php echo $project['description']; ?>
-				<div class="project-buttons"><a href="<?php echo $project['source']; ?>" target="_blank" id="code-prev">Source Code</a> <?php if($project['preview']) { ?><a href="<?php echo $project['preview']; ?>" target="_blank" id="code-prev">Preview</a> <?php } ?></div></span>
+				<div class="project-buttons"><a href="<?php echo $project['source']; ?>" target="_blank" id="code-prev">Source Code</a> <?php if($project['preview']) { ?><a href="<?php echo $project['preview']; ?>" class="<?php if ($project['active'] != "Y") { echo "disabled"; } ?>" target="_blank" id="code-prev">Preview</a> <?php } ?></div></span>
 								</div>
 								<div id="languages">
 									<?php $langs = json_decode($project['languages']); 

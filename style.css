@@ -803,3 +803,9 @@ h3, #about-me {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+.disabled {
+  pointer-events: none;
+  background-color: grey !important;
+  cursor: not-allowed;
+}
