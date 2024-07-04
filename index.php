@@ -51,10 +51,8 @@
 			$(window).scroll(function(){
 				if ($(this).scrollTop() > 150) {
 					$('.scrollToTop').fadeIn();
-					$('.bottom-right-div').fadeIn();
 				} else {
 					$('.scrollToTop').fadeOut();
-					$('.bottom-right-div').fadeOut();
 				}
 			});
 			$('.scrollToTop').click(function(){
@@ -518,19 +516,6 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 	<div id="errs">
 		<p id="form-err"></p>
 		<button onclick="closeError();" id="button-errors">Cancel</button>
-	</div>
-	<?php
-	$lastCommitTimestamp = exec('git log -1 --format=%at');
-	$lastCommitDate = date('Y-m-d H:i:s', $lastCommitTimestamp);
-	$currentBranch = exec('git rev-parse --abbrev-ref HEAD');
-	$lastCommitId = exec('git log -1 --format=%h');
-	?>
-	<div class="bottom-right-div">
-		<div class="main-footer" style="padding: 5px;">
-			<b>Version</b>: <?=$currentBranch?> 
-			<b>ID</b>: <?=$lastCommitId;?> 
-			<b>Date</b>: <?=$lastCommitDate?>
-		</div>          
 	</div>
 	<script type="text/javascript" src="script.js?v=<?php echo time(); ?>"></script>
 </body>
