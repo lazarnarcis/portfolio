@@ -12,8 +12,6 @@
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
