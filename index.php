@@ -436,7 +436,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			?>
 		</div>
 	</div>
-	<div id="about">
+	<div class="about">
 		<div class="flex-paragraphs">
 			<img src="imgs/profile-picture.jpg" alt="Profile Picture" id="profile-picture">
 			<h3 id="about-me">About me</h3>
@@ -463,7 +463,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			<span>The price of a project differs depending on your opportunities and preferences. Below you will find different ways to contact me.</span>
 		</p>
 	</div>
-	<form id="contact">
+	<form id="contact" class="contact">
 		<h3>Contact</h3>
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>
 		<label for="firstname" class="align-items-of-div">
@@ -491,15 +491,15 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			<span>Message</span>
 		</label>
 		<textarea type="text" id="message" placeholder="I want a website..."></textarea>
-		<div class="contact-email"><input id="submit" type="submit" value="Submit" />
+		<div class="contact-email"><input class="submit" type="submit" value="Submit" />
 		<span>send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a> or <a href="tel:+40770759378" id="link-to-project">call me</a>.</span></div>
 	</form>
-	<div id="projects">
-		<h3 id="about-me">Leave a Feedback</h3>
+	<div class="about feedback_div">
+		<h3 id="about-me" class="leave-feedback">Leave a Feedback</h3>
 		<form id="feedback_form">
 			<input type="text" name="femail" id="femail" placeholder="username@domain.com">
 			<textarea name="feedback" placeholder="My opinion of your portfolio is..." id="feedback"></textarea>
-			<input type="submit" value="Send">
+			<div class="contact-email"><input type="submit" class="submit" value="Send" /></div>
 		</form>
 	</div>
 	<footer>
