@@ -1,4 +1,5 @@
 <?php require 'config.php'; ?>
+<?php include "php/join_activity.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -262,7 +263,7 @@
 	</div>
 	<div class="nav-bar-phone">
 		<img src="imgs/menu-logo.svg" id="menulogo" alt="Logo">
-		<img src="imgs/website-logo.jpg" alt="Chat Logo" id="logo-nav-phone"><span>Portfolio Website</span>	
+		<img src="imgs/website-logo.jpg" alt="Chat Logo" id="logo-nav-phone"><span>Narcis Lazar</span>	
 		<img alt="Dark Theme" id="theme-switchers" />
 	</div>
 	<div id="modal"></div>
