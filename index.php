@@ -19,6 +19,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Vollkorn&display=swap" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<script>
 		$(document).ready(function() {
 			let xa = 0;
@@ -120,37 +123,43 @@
 				}
 				return false;
 			});
-			$('#feedback_form').submit(function(event) {
-				event.preventDefault();
-				let data = {
-					feedback: $("#feedback").val(),
-					email: $("#femail").val()
-				};
-				let feedback = $("#feedback").val();
-				let femail = $("#femail").val();
-				let errs = document.getElementById("errs");
-				let textErrs = document.getElementById("form-err");
-				let validateEmailvar = validateEmail(femail);
+			$('#feedbackBtn').on('click', function() {
+				Swal.fire({
+					title: 'Leave your feedback',
+					html: '<input id="swal-input1" class="swal2-input" placeholder="Your email">' +
+						'<textarea id="swal-input2" class="swal2-textarea" placeholder="Type your feedback here..."></textarea>',
+					focusConfirm: false,
+					showCancelButton: true,
+					confirmButtonText: 'Submit',
+					cancelButtonText: 'Cancel',
+					preConfirm: () => {
+						const email = document.getElementById('swal-input1').value;
+						const feedback = document.getElementById('swal-input2').value;
+						if (!email || !feedback) {
+							Swal.showValidationMessage('Both fields are required');
+							return false;
+						}
+						return { email: email, feedback: feedback };
+					}
+				}).then((result) => {
+					if (result.isConfirmed) {
+						const email = result.value.email;
+						const feedback = result.value.feedback;
+						let data = {
+							email: email,
+							feedback: feedback
+						};
 
-				if (femail == "") {
-					textErrs.innerHTML = "Please enter email!";
-					errs.style = "transform: scale(1);";
-				} else if (validateEmailvar == false) {
-					textErrs.innerHTML = "Please enter valid email!";
-					errs.style = "transform: scale(1);";
-				} else if (feedback == "") {
-					textErrs.innerHTML = "Please enter feedback!";
-					errs.style = "transform: scale(1);";
-				} else {
-					$.post('./php/leave_feedback.php', data, function(html) {
-						$("#feedback").val("");
-						$("#femail").val("");
-
-						textErrs.innerHTML = html;
-						errs.style = "transform: scale(1);";
-					});
-				}
-				return false;
+						$.post('./php/leave_feedback.php', data, function(html) {
+							Swal.fire(
+								'Thank you!',
+								html,
+								'success'
+							);
+						});
+						
+					}
+				});
 			});
 		});
 
@@ -494,14 +503,9 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		<div class="contact-email"><input class="submit" type="submit" value="Submit" />
 		<span>send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a> or <a href="tel:+40770759378" id="link-to-project">call me</a>.</span></div>
 	</form>
-	<div class="about feedback_div">
-		<h3 id="about-me" class="leave-feedback">Leave a Feedback</h3>
-		<form id="feedback_form">
-			<input type="text" name="femail" id="femail" placeholder="username@domain.com">
-			<textarea name="feedback" placeholder="My opinion of your portfolio is..." id="feedback"></textarea>
-			<div class="contact-email"><input type="submit" class="submit" value="Send" /></div>
-		</form>
-	</div>
+	<button id="feedbackBtn">
+		<i class="fas fa-comment-dots"></i> Leave Feedback
+	</button>
 	<footer>
 		<span id="footer-content"></span>
 		<div id="right-footer">

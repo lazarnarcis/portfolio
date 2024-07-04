@@ -810,20 +810,26 @@ h3, #about-me {
   cursor: not-allowed;
 }
 
-.leave-feedback {
-  margin-top: 25px !important;
+#feedbackBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4bbfbd; 
+  color: white; 
+  padding: 12px 17px; 
+  border: none; 
+  border-radius: 10px;  
+  font-size: 14px; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
 }
 
-.feedback_div {
-  background-color: #f5f5f5;
-    box-shadow: inset 0px 5px 5px -5px grey;
-    border-top: none;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    padding-left: 150px !important;
-    padding-right: 150px !important;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+#feedbackBtn i {
+  margin-right: 10px; 
+}
 
+#feedbackBtn:hover {
+  background-color: #29918f; 
 }
