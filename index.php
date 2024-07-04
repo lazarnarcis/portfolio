@@ -406,7 +406,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 	</div>
 	<div id="about">
 		<div class="flex-paragraphs">
-			<img src="https://avatars.githubusercontent.com/u/82839799?v=4" alt="Profile Picture" id="profile-picture">
+			<img src="imgs/profile-picture.jpg" alt="Profile Picture" id="profile-picture">
 			<h3 id="about-me">About me</h3>
 		</div>
 		<p id="text-about">
