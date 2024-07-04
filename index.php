@@ -69,7 +69,7 @@
 				var re = /\S+@\S+\.\S+/;
 				return re.test(email);
 			}
-			$('form').submit(function(event) {
+			$('#contact').submit(function(event) {
 				event.preventDefault();
 				let data = {
 					firstname: $("#firstname").val(),
@@ -113,6 +113,38 @@
 						$("#email").val("");
 						$("#subject").val("");
 						$("#message").val("");
+
+						textErrs.innerHTML = html;
+						errs.style = "transform: scale(1);";
+					});
+				}
+				return false;
+			});
+			$('#feedback_form').submit(function(event) {
+				event.preventDefault();
+				let data = {
+					feedback: $("#feedback").val(),
+					email: $("#femail").val()
+				};
+				let feedback = $("#feedback").val();
+				let femail = $("#femail").val();
+				let errs = document.getElementById("errs");
+				let textErrs = document.getElementById("form-err");
+				let validateEmailvar = validateEmail(femail);
+
+				if (femail == "") {
+					textErrs.innerHTML = "Please enter email!";
+					errs.style = "transform: scale(1);";
+				} else if (validateEmailvar == false) {
+					textErrs.innerHTML = "Please enter valid email!";
+					errs.style = "transform: scale(1);";
+				} else if (feedback == "") {
+					textErrs.innerHTML = "Please enter feedback!";
+					errs.style = "transform: scale(1);";
+				} else {
+					$.post('./php/leave_feedback.php', data, function(html) {
+						$("#feedback").val("");
+						$("#femail").val("");
 
 						textErrs.innerHTML = html;
 						errs.style = "transform: scale(1);";
@@ -462,6 +494,14 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		<div class="contact-email"><input id="submit" type="submit" value="Submit" />
 		<span>send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a> or <a href="tel:+40770759378" id="link-to-project">call me</a>.</span></div>
 	</form>
+	<div id="projects">
+		<h3 id="about-me">Leave a Feedback</h3>
+		<form id="feedback_form">
+			<input type="text" name="femail" id="femail" placeholder="username@domain.com">
+			<textarea name="feedback" placeholder="My opinion of your portfolio is..." id="feedback"></textarea>
+			<input type="submit" value="Send">
+		</form>
+	</div>
 	<footer>
 		<span id="footer-content"></span>
 		<div id="right-footer">
