@@ -160,6 +160,9 @@
 		});
 
 		document.addEventListener('DOMContentLoaded', function () {
+			let clickCount = 0;
+        	const maxClicks = 5;
+
 			particlesJS('particles-js',
 			{
 				"particles": {
@@ -270,6 +273,16 @@
 					}
 				},
 				"retina_detect": true
+			});
+
+			document.querySelector('#particles-js').addEventListener('click', (event) => {
+				if (clickCount < maxClicks) {
+					clickCount++;
+					pJSDom[0].pJS.interactivity.modes.push.particles_nb = 4;
+					pJSDom[0].pJS.fn.modes.pushParticles(4, pJSDom[0].pJS.interactivity.mouse);
+				} else {
+					pJSDom[0].pJS.interactivity.events.onclick.enable = false;
+				}
 			});
 		});
 	</script>
