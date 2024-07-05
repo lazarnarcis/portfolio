@@ -12,14 +12,14 @@
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Vollkorn&display=swap" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="assets/css/fontgoogle1.css" rel="stylesheet">
+	<link href="assets/css/fontgoogle2.css" rel="stylesheet">
+	<link href="assets/css/fontgoogle3.css" rel="stylesheet">
+	<link href="assets/css/fontgoogle4.css" rel="stylesheet">
+	<script src="assets/js/particles.js"></script>
+	<link rel="stylesheet" href="assets/css/sweetalert.css">
+	<script src="assets/js/sweetalert.js"></script>
+	<link rel="stylesheet" href="assets/css/fontawesome.css">
 	<script>
 		$(document).ready(function() {
 			let xa = 0;
