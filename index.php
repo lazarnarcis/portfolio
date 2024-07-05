@@ -50,9 +50,9 @@
 			});
 			$(window).scroll(function(){
 				if ($(this).scrollTop() > 150) {
-					$('.scrollToTop').fadeIn();
+					$('.scrollToTop, #feedbackBtn').fadeIn();
 				} else {
-					$('.scrollToTop').fadeOut();
+					$('.scrollToTop, #feedbackBtn').fadeOut();
 				}
 			});
 			$('.scrollToTop').click(function(){
@@ -335,7 +335,6 @@
 				<img src="imgs/bootstrap.png" alt="Bootstrap" id="language" title="Bootstrap">
 				<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
 				<img src="imgs/json.png" alt="JSON" id="language" title="JSON">
-				<img src="imgs/vue.png" alt="Vue" id="language" title="Vue">
 				<img src="imgs/typescript.png" alt="Typescript" id="language" title="Typescript">
 				<img src="imgs/tailwind.png" alt="Tailwind" id="language" title="Tailwind">
 			</div>
