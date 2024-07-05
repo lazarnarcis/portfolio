@@ -330,7 +330,6 @@
 				<img src="imgs/css3.png" alt="CSS3" id="language" title="CSS3">
 				<img src="imgs/sass.png" alt="Sass" id="language" title="Sass">
 				<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
-				<img src="imgs/php.png" alt="PHP" id="language" title="PHP">
 				<img src="imgs/jquery.png" alt="jQuery" id="language" title="jQuery">
 				<img src="imgs/bootstrap.png" alt="Bootstrap" id="language" title="Bootstrap">
 				<img src="imgs/react.png" alt="React JS" id="language" title="React JS">
@@ -440,7 +439,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			?>
 		</div>
 	</div>
-	<div class="about">
+	<div class="about" id="about">
 		<div class="flex-paragraphs">
 			<img src="imgs/profile-picture.jpg" alt="Profile Picture" id="profile-picture">
 			<h3 id="about-me">About me</h3>
