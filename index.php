@@ -359,7 +359,7 @@
 			<div id="description-skills">
 				<span>My journey into backend development began with PHP, a powerful scripting language for web development. With PHP, I explored various frameworks such as Laravel, CodeIgniter, and Symfony, each offering unique features for building robust applications. To expand my skills, I ventured into JavaScript and its powerful runtime environment, Node.js, which allows for server-side scripting. Utilizing Express.js, a minimal and flexible Node.js web application framework, I developed efficient and scalable web applications.
 
-Typescript has also been a valuable addition, bringing static typing to JavaScript and enhancing my coding experience in larger projects. For database management, I rely on SQL, leveraging its structured query language to interact with relational databases efficiently and effectively.</span>
+Typescript has also been a valuable addition, bringing static typing to JavaScript and enhancing my coding experience in larger projects. For database management, I use SQL, leveraging its structured query language to interact with relational databases efficiently and effectively.</span>
 			</div>
 			<div id="languages">
 				<img src="imgs/javascript.png" alt="Javascript" id="language" title="Javascript">
