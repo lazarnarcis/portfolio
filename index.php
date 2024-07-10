@@ -1,5 +1,11 @@
-<?php require 'config.php'; ?>
-<?php include "php/join_activity.php"; ?>
+<?php 
+	require 'config.php';
+	include "php/join_activity.php";
+	 
+	require_once __DIR__ . '/vendor/autoload.php'; 
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -508,7 +514,11 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		</label>
 		<textarea type="text" id="message" placeholder="I want a website..."></textarea>
 		<div class="contact-email"><input class="submit" type="submit" value="Submit" />
-		<span>send email at <a href="mailto:lnarcis310@gmail.com" id="link-to-project">lnarcis310@gmail.com</a> or <a href="tel:+40770759378" id="link-to-project">call me</a>.</span></div>
+		<?php 
+			$email = $_ENV['GMAIL_EMAIL'];
+			$phone = $_ENV['PHONE_NUMBER']; 
+		?>
+		<span>send email at <a href="mailto:<?=$email;?>" id="link-to-project"><?=$email;?></a> or <a href="tel:<?=$phone?>" id="link-to-project">call me</a>.</span></div>
 	</form>
 	<button id="feedbackBtn">
 		<i class="fas fa-comment-dots"></i> Leave Feedback
