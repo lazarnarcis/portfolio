@@ -16,7 +16,7 @@
     try {
         $mail->isSMTP();
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = false;  
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
         $mail->Host = $mail_host;  
         $mail->Port = $mail_port; 
         $mail->Username = $email; 
