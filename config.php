@@ -20,6 +20,8 @@
         $mail_port = $_ENV['MAIL_PORT'];
         $email = $_ENV['GMAIL_EMAIL'];
         $password = $_ENV['GMAIL_PASSWORD'];
+
+        $mail_to = $_ENV['SEND_MAILS_TO'];
     } else {
         $username_db = "root";
         $password_db = "";
@@ -32,6 +34,8 @@
         $mail_port = "597";
         $email = "example@contact.com";
         $password = "myPassword123";
+
+        $mail_to = "";
     }
 
     $link = mysqli_connect($host_db, $username_db, $password_db, $database_db, $port_db);

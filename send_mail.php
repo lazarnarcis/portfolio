@@ -17,17 +17,15 @@
     
     try {
         $mail->isSMTP();
-        $mail->SMTPDebug = 0; 
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = $mail_smtp;  
+        $mail->SMTPSecure = false;  
         $mail->Host = $mail_host;  
         $mail->Port = $mail_port; 
-        
         $mail->Username = $email; 
         $mail->Password = $password; 
         
-        $mail->setFrom($emailtoSend, "$firstname $lastname - $emailtoSend");
-        $mail->addAddress($email);
+        $mail->setFrom($email, "$emailtoSend - $firstname $lastname");
+        $mail->addAddress($mail_to);
 
         $mail->isHTML(true); 
         $mail->Subject = $subject;
