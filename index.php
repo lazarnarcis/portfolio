@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-	<meta name="description" content="Hello! My name is Narcis Lazar, I am a full stack web developer and I started web programming in 7th grade (2017).">
+	<meta name="description" content="Experienced full stack web developer Narcis Lazar, crafting high-performance websites and innovative web applications since 2017. Specializing in front-end and back-end development, I deliver tailored, professional solutions for businesses looking to thrive online. Get in touch for cutting-edge web development services.">
 	<title>Narcis || Full Stack Web Developer</title>
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
@@ -529,8 +529,8 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			<a href="https://gitlab.com/lazarnarcis" target="_blank" title="Gitlab"><img src="imgs/gitlab.svg" id="gitlab-i" class="link-images"></a>
 			<a href="https://ro.linkedin.com/in/narcislazar" target="_blank" title="Linkedin"><img src="imgs/linkedin.svg" id="linkedin-i" class="link-images"></a>
 			<a href="https://github.com/lazarnarcis" target="_blank" title="Github"><img src="imgs/github.svg" id="github-i" class="link-images"></a>
-			<a href="https://www.reddit.com/u/narcis340" target="_blank" title="Reddit"><img src="imgs/reddit.svg" id="reddit-i" class="link-images"></a>
-			<a href="https://www.facebook.com/narcis2003/" target="_blank" title="Facebook"><img src="imgs/facebook.svg" id="facebook-i" class="link-images"></a>
+			<a href="https://www.reddit.com/u/lnarcis310" target="_blank" title="Reddit"><img src="imgs/reddit.svg" id="reddit-i" class="link-images"></a>
+			<a href="https://www.facebook.com/lnarcis310/" target="_blank" title="Facebook"><img src="imgs/facebook.svg" id="facebook-i" class="link-images"></a>
 			<a href="https://instagram.com/lnarcis310/" target="_blank" title="Instagram"><img src="imgs/instagram.svg" id="instagram-i" class="link-images"></a>
 		</div>
 	</footer>
