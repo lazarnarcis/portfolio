@@ -10,9 +10,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="description" content="Experienced full stack web developer Narcis Lazar, crafting high-performance websites and innovative web applications since 2017. Specializing in front-end and back-end development, I deliver tailored, professional solutions for businesses looking to thrive online. Get in touch for cutting-edge web development services.">
 	<title>Narcis || Full Stack Web Developer</title>
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
@@ -127,9 +125,9 @@
 			});
 			$('#feedbackBtn').on('click', function() {
 				Swal.fire({
-					title: 'Leave your feedback',
-					html: '<input id="swal-input1" class="swal2-input" placeholder="Your email">' +
-						'<textarea id="swal-input2" class="swal2-textarea" placeholder="Type your feedback here..."></textarea>',
+					title: 'Leave your feedback :>',
+					html: '<input id="swal-input1" style="width: 75%;" class="swal2-input" placeholder="Your email">' +
+						'<textarea id="swal-input2" style="width: 75%;"  class="swal2-textarea" placeholder="Type your feedback here..."></textarea>',
 					focusConfirm: false,
 					showCancelButton: true,
 					confirmButtonText: 'Submit',
@@ -159,7 +157,6 @@
 								'success'
 							);
 						});
-						
 					}
 				});
 			});
