@@ -426,12 +426,13 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 					}
 				}
 				if (count($projects)) {
+					$project_id = 1;
 					foreach ($projects as $project) {
 						?>
 							<div id="content-of-projects">
 								<div class="align-items-of-div">
 									<img src="<?php echo $project['logo']; ?>" alt="<?php echo $project['name']; ?> Logo" id="project-logo">
-									<b><span><i><?php echo $project['id']; ?></i>. <?php echo $project['name']; ?></span></b>
+									<b><span><i><?php echo $project_id; ?></i>. <?php echo $project['name']; ?></span></b>
 								</div>
 								<div id="description-skills">
 									<span><?php echo $project['description']; ?>
@@ -450,6 +451,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 								</div>
 							</div>
 						<?php
+						$project_id++;
 					}
 				}
 			?>
