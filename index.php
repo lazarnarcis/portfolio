@@ -15,7 +15,7 @@
 	<title>Narcis || Full Stack Web Developer</title>
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" type="text/css" href="style.min.css?v=<?php echo time(); ?>">
 	<link href="assets/css/fontgoogle1.css" rel="stylesheet">
 	<link href="assets/css/fontgoogle2.css" rel="stylesheet">
 	<link href="assets/css/fontgoogle3.css" rel="stylesheet">
