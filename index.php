@@ -24,6 +24,8 @@
 	<link rel="stylesheet" href="assets/css/sweetalert.css">
 	<script src="assets/js/sweetalert.js"></script>
 	<link rel="stylesheet" href="assets/css/fontawesome.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.css">
+	<script src="assets/js/swiper-bundle.js"></script>
 	<script>
 		$(document).ready(function() {
 			let xa = 0;
@@ -125,37 +127,123 @@
 			});
 			$('#feedbackBtn').on('click', function() {
 				Swal.fire({
-					title: 'Leave your feedback :>',
-					html: '<input id="swal-input1" style="width: 75%;" class="swal2-input" placeholder="Your email">' +
-						'<textarea id="swal-input2" style="width: 75%;"  class="swal2-textarea" placeholder="Type your feedback here..."></textarea>',
+					title: 'Leave your feedback',
+					html: `
+						<p style="margin: 0;">Leave your feedback about the services offered by Narcis.</p>
+						<div style="display: flex; flex-direction: column; gap: 10px; max-width: 350px; margin: 0 auto;">
+							<input id="swal-input1" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Your name">
+							<input id="swal-input2" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Your email">
+							<input id="swal-input3" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Message">
+							<input id="swal-input5" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Profile Picture URL">
+							<input id="swal-input7" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Project Name">
+							<input id="swal-input8" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Source Code Link">
+							<div id="rating" style="display: flex; gap: 5px; justify-content: center; margin-top: 10px;">
+								<span class="star" data-value="1">☆</span>
+								<span class="star" data-value="2">☆</span>
+								<span class="star" data-value="3">☆</span>
+								<span class="star" data-value="4">☆</span>
+								<span class="star" data-value="5">☆</span>
+							</div>
+						</div>
+					`,
 					focusConfirm: false,
 					showCancelButton: true,
 					confirmButtonText: 'Submit',
 					cancelButtonText: 'Cancel',
 					preConfirm: () => {
-						const email = document.getElementById('swal-input1').value;
-						const feedback = document.getElementById('swal-input2').value;
-						if (!email || !feedback) {
-							Swal.showValidationMessage('Both fields are required');
+						const name = document.getElementById('swal-input1').value;
+						const email = document.getElementById('swal-input2').value;
+						const message = document.getElementById('swal-input3').value;
+						const profile_picture = document.getElementById('swal-input5').value;
+						const project_name = document.getElementById('swal-input7').value;
+						const source_code_link = document.getElementById('swal-input8').value;
+						const stars = document.querySelectorAll('#rating .star.selected').length;
+
+						if (!name) {
+							Swal.showValidationMessage('Name is required');
 							return false;
 						}
-						return { email: email, feedback: feedback };
+						if (!email || !/\S+@\S+\.\S+/.test(email)) {
+							Swal.showValidationMessage('A valid email is required');
+							return false;
+						}
+						if (!message) {
+							Swal.showValidationMessage('Message is required');
+							return false;
+						}
+						if (!profile_picture || !/^https?:\/\/.*\..+/.test(profile_picture)) {
+							Swal.showValidationMessage('A valid Profile Picture URL is required');
+							return false;
+						}
+						if (!project_name) {
+							Swal.showValidationMessage('Project Name is required');
+							return false;
+						}
+						if (!source_code_link || !/^https?:\/\/.*\..+/.test(source_code_link)) {
+							Swal.showValidationMessage('A valid Source Code Link is required');
+							return false;
+						}
+						if (stars === 0) {
+							Swal.showValidationMessage('A star rating is required');
+							return false;
+						}
+
+						return {
+							name: name,
+							email: email,
+							message: message,
+							profile_picture: profile_picture,
+							project_name: project_name,
+							source_code_link: source_code_link,
+							stars: stars
+						};
+					},
+					didOpen: () => {
+						const stars = document.querySelectorAll('#rating .star');
+						stars.forEach(star => {
+							star.addEventListener('click', () => {
+								stars.forEach(s => s.classList.remove('selected'));
+								star.classList.add('selected');
+								for (let i = 0; i < star.dataset.value; i++) {
+									stars[i].classList.add('selected');
+								}
+							});
+						});
 					}
 				}).then((result) => {
 					if (result.isConfirmed) {
+						const name = result.value.name;
 						const email = result.value.email;
-						const feedback = result.value.feedback;
+						const message = result.value.message;
+						const profile_picture = result.value.profile_picture;
+						const project_name = result.value.project_name;
+						const source_code_link = result.value.source_code_link;
+						const stars = result.value.stars;
 						let data = {
+							name: name,
 							email: email,
-							feedback: feedback
+							message: message,
+							profile_picture: profile_picture,
+							project_name: project_name,
+							source_code_link: source_code_link,
+							stars: stars
 						};
 
-						$.post('./php/leave_feedback.php', data, function(html) {
-							Swal.fire(
-								'Thank you!',
-								html,
-								'success'
-							);
+						$.post('./php/leave_feedback.php', data, function(data) {
+							data = JSON.parse(data);
+							if (data.type == "error"){
+								Swal.fire(
+									'Error',
+									data.message,
+									'error'
+								);
+							} else if(data.type == "success") {
+								Swal.fire(
+									'Thank you!',
+									data.message,
+									'success'
+								);
+							}
 						});
 					}
 				});
@@ -310,6 +398,7 @@
 			<li><a href="#skills" id="principal">Skills</a></li>
 			<li><a href="#projects" id="principal">Projects</a></li>
 			<li><a href="#about" id="principal">About</a></li>
+			<li><a href="#feedbacks" id="principal">Feedbacks</a></li>
 			<li><img alt="Dark Theme" id="theme-switcher"></li>
 			<li><a id="principal" class="active" href="#contact">Contact</a></li>
 		</ul>
@@ -327,6 +416,7 @@
 			<li><a href="#skills" id="btns" class="btns">Skills</a></li>
 			<li><a href="#projects" id="btns" class="btns">Projects</a></li>
 			<li><a href="#about" id="btns" class="btns">About</a></li>
+			<li><a href="#feedbacks" id="btns" class="btns">Feedbacks</a></li>
 			<li><a href="#contact" id="btns" class="btns">Contact</a></li>
 		</ul>
 	</div>
@@ -484,6 +574,68 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 			<span>The price of a project differs depending on your opportunities and preferences. Below you will find different ways to contact me.</span>
 		</p>
 	</div>
+	<div id="feedbacks">
+		<h3>Feedbacks</h3>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<?php
+					$sql = "SELECT * FROM feedbacks where verified=1 ORDER BY created_at DESC;";
+					$result = mysqli_query($link, $sql);
+					$feedbacks = [];
+					if ($result) {
+						while ($row = mysqli_fetch_assoc($result)) {
+							$feedbacks[] = $row;
+						}
+					}
+
+					if (count($feedbacks)) {
+						foreach ($feedbacks as $feedback) {
+							?>
+							<div class="swiper-slide content-of-feedback">
+								<div class="align-items-of-div">
+									<img src="<?php echo $feedback['profile_picture']; ?>" alt="Feedback" id="feedback-logo">
+									<b><span><i><?php echo htmlspecialchars($feedback['name']); ?></i></span></b>
+								</div>
+								<div id="description-feedback">
+									<div style="height: 175px; overflow-y: scroll;">
+										<span><?php echo htmlspecialchars($feedback['message']); ?></span>
+									</div>
+									<p><strong>Project:</strong> <?php echo htmlspecialchars($feedback['project_name']); ?></p>
+									<?php if (!empty($feedback['source_code_link'])): ?>
+										<p><a class="submit" href="<?php echo htmlspecialchars($feedback['source_code_link']); ?>" id="view_source_code" target="_blank">View Source Code</a></p>
+									<?php endif; ?>
+						
+									<p><strong>Rating:</strong> 
+										<?php 
+										$stars = intval($feedback['stars']); 
+										for ($i = 0; $i < 5; $i++) {
+											if ($i < $stars) {
+												echo '<span style="color: gold;">&#9733;</span>';
+											} else {
+												echo '<span style="color: lightgray;">&#9734;</span>'; 
+											}
+										}
+										?>
+									</p>
+						
+									<p style="text-align: right; margin: 0;"><small><b><?php echo htmlspecialchars($feedback['email']); ?></small></b></p>
+									<p style="text-align: right; margin:0;"><small><strong>Feedback on:</strong> <?php echo htmlspecialchars($feedback['created_at']); ?></small></p>
+								</div>
+							</div>
+							<?php
+						}
+						
+					} else {
+						echo "<p>working at this section.</p>";
+					}
+				?>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
 	<form id="contact" class="contact">
 		<h3>Contact</h3>
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>

@@ -10,4 +10,4 @@ Link to app: https://dev-hub.ro
 
 <hr>
 
-<p align="center">This project is made by <a href="https://www.facebook.com/lnarcis310/">Narcis</a></p>
+<p align="center">This project is made by <a href="https://dev-hub.ro/">Narcis</a></p>
