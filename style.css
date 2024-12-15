@@ -223,10 +223,10 @@ body {
     text-decoration: none;
   }
   [data-theme="dark"] .swiper-slide {
-    background-color: rgb(123, 123, 123);
+    background-color: rgb(33, 33, 33);
   }
   [data-theme='dark'] .content-of-feedback {
-    border-bottom: 1px solid rgb(123, 123, 123);
+    border-bottom: 1px solid rgb(33, 33, 33);
   }
   [data-theme="dark"] .swiper-slide *:not(.submit) {
     color: white !important;

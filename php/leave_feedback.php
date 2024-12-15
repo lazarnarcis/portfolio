@@ -90,8 +90,7 @@ try {
         if ($mail->send()) {
             $sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', 'BOT')";
             mysqli_query($link, $sql);
-            $sql = "INSERT INTO feedbacks (name, email, message, profile_picture, project_name, source_code_link, stars) 
-                    VALUES ('$name','$temail', '$message','$newPath','$project_name','$source_code_link','$stars')";
+            $sql = "INSERT INTO feedbacks (name, email, message, profile_picture, project_name, source_code_link, stars) VALUES ('$name','$temail', '$message','$newPath','$project_name','$source_code_link','$stars')";
             mysqli_query($link, $sql);
             echo json_encode(['type' => "success", "message" => "Your feedback has been sent! Thank you! <b>Wait administrator to verify...</b>"]);
         } else {

@@ -425,7 +425,7 @@
 		<div id="content-of-project">
 			<div class="align-items-of-div">
 				<img src="imgs/frontend.svg" alt="Frontend" id="project-logo">
-				<b><span>Frontend</span></b>
+				<b><span>&nbsp;Frontend</span></b>
 			</div>
 			<div id="description-skills">
 				<span>I create responsive, modern, and fast websites using HTML5, CSS3, and JavaScript (ES6+). For enhanced development, I utilize frameworks and tools such as React JS for dynamic interfaces, Pug for efficient HTML templating, and SASS for powerful CSS preprocessing. Additionally, I leverage Bootstrap and Tailwind CSS for streamlined, responsive design, and jQuery for simplified DOM manipulation.</span>
@@ -447,7 +447,7 @@
 		<div id="content-of-project">
 			<div class="align-items-of-div">
 				<img src="imgs/backend.svg" alt="Backend" id="project-logo">
-				<b><span>Backend</span></b>
+				<b><span>&nbsp;Backend</span></b>
 			</div>
 			<div id="description-skills">
 				<span>My journey into backend development began with PHP, a powerful scripting language for web development. With PHP, I explored various frameworks such as Laravel, CodeIgniter, and Symfony, each offering unique features for building robust applications. To expand my skills, I ventured into JavaScript and its powerful runtime environment, Node.js, which allows for server-side scripting. Utilizing Express.js, a minimal and flexible Node.js web application framework, I developed efficient and scalable web applications.
@@ -469,7 +469,7 @@ Typescript has also been a valuable addition, bringing static typing to JavaScri
 		<div id="content-of-project">
 			<div class="align-items-of-div">
 				<img src="imgs/devops.svg" alt="DevOps" id="project-logo">
-				<b><span>DevOps</span></b> 
+				<b><span>&nbsp;DevOps</span></b> 
 			</div>
 			<div id="description-skills">
 				<span>I specialize in DevOps practices aimed at enhancing the efficiency and reliability of software development and deployment processes. My approach involves integrating automation and continuous improvement strategies to streamline workflows and ensure seamless delivery of applications.With a focus on optimizing infrastructure and leveraging cloud services, I implement robust version control with tools like Git and efficient collaboration through platforms like Gitlab. Proficient in Linux environments, I manage servers and deploy applications, utilizing scripting languages such as Shell for task automation.
@@ -490,7 +490,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		<div id="content-of-project">
 			<div class="align-items-of-div">
 				<img src="imgs/services.svg" alt="Services" id="project-logo">
-				<b><span>Services</span></b> 
+				<b><span>&nbsp;Services</span></b> 
 			</div>
 			<div id="description-skills">
 				<span>APIs are crucial for the dynamic functionality of any website. With proper documentation, I can integrate and use any API.</span>
@@ -522,7 +522,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 							<div id="content-of-projects">
 								<div class="align-items-of-div">
 									<img src="<?php echo $project['logo']; ?>" alt="<?php echo $project['name']; ?> Logo" id="project-logo">
-									<b><span><i><?php echo $project_id; ?></i>. <?php echo $project['name']; ?></span></b>
+									<b><span><i>&nbsp;<?php echo $project_id; ?></i>. <?php echo $project['name']; ?></span></b>
 								</div>
 								<div id="description-skills">
 									<span><?php echo $project['description']; ?>
@@ -597,12 +597,12 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 									<b><span><i><?php echo htmlspecialchars($feedback['name']); ?></i></span></b>
 								</div>
 								<div id="description-feedback">
-									<div style="height: 175px; overflow-y: scroll;">
+									<div style="height: 145px; overflow-y: scroll;">
 										<span><?php echo htmlspecialchars($feedback['message']); ?></span>
 									</div>
 									<p><strong>Project:</strong> <?php echo htmlspecialchars($feedback['project_name']); ?></p>
 									<?php if (!empty($feedback['source_code_link'])): ?>
-										<p><a class="submit" href="<?php echo htmlspecialchars($feedback['source_code_link']); ?>" id="view_source_code" target="_blank">View Source Code</a></p>
+										<p><a class="submit" href="<?php echo htmlspecialchars($feedback['source_code_link']); ?>" id="view_source_code" target="_blank">View code / website</a></p>
 									<?php endif; ?>
 						
 									<p><strong>Rating:</strong> 
@@ -618,7 +618,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 										?>
 									</p>
 						
-									<p style="text-align: right; margin: 0;"><small><b><?php echo htmlspecialchars($feedback['email']); ?></small></b></p>
+									<p style="text-align: right; margin: 0;"><small><b><a href="mailto:<?php echo htmlspecialchars($feedback['email']); ?>" id="link-to-project"><?php echo htmlspecialchars($feedback['email']); ?></a></small></b></p>
 									<p style="text-align: right; margin:0;"><small><strong>Feedback on:</strong> <?php echo htmlspecialchars($feedback['created_at']); ?></small></p>
 								</div>
 							</div>
@@ -641,27 +641,27 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>
 		<label for="firstname" class="align-items-of-div">
 			<img src="imgs/firstname.svg" alt="First Name" id="email-logo">
-			<span>First Name</span>
+			<span>&nbsp;First Name</span>
 		</label>
 		<input type="text" id="firstname" placeholder="Your First Name">
 		<label for="lastname" class="align-items-of-div">
 			<img src="imgs/lastname.svg" alt="Last Name" id="email-logo">
-			<span>Last Name</span>
+			<span>&nbsp;Last Name</span>
 		</label>
 		<input type="text" id="lastname" placeholder="Your Last Name">
 		<label for="email" class="align-items-of-div">
 			<img src="imgs/email.svg" alt="Email" id="email-logo">
-			<span>Email</span>
+			<span>&nbsp;Email</span>
 		</label>
 		<input type="text" id="email" placeholder="username@domain.com">
 		<label for="subject" class="align-items-of-div">
 			<img src="imgs/subject.svg" alt="Subject" id="email-logo">
-			<span>Subject</span>
+			<span>&nbsp;Subject</span>
 		</label>
 		<input type="text" id="subject" placeholder="Web App">
 		<label for="message" class="align-items-of-div">
 			<img src="imgs/message.svg" alt="Message" id="email-logo">
-			<span>Message</span>
+			<span>&nbsp;Message</span>
 		</label>
 		<textarea type="text" id="message" placeholder="I want a website..."></textarea>
 		<div class="contact-email"><input class="submit" type="submit" value="Submit" />
