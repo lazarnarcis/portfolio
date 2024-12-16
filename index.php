@@ -11,7 +11,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="description" content="Experienced full stack web developer Narcis Lazar, crafting high-performance websites and innovative web applications since 2017. Specializing in front-end and back-end development, I deliver tailored, professional solutions for businesses looking to thrive online. Get in touch for cutting-edge web development services.">
+	<meta name="description" content="Narcis Lazar, an experienced full-stack web developer, has been creating high-performance websites and innovative web applications since 2017. An expert in front-end and back-end, I offer customized solutions for businesses that want to excel online. Contact me for professional web development services.">
 	<title>Narcis || Full Stack Web Developer</title>
 	<link rel="shortcut icon" href="imgs/website-logo.jpg" type="image/x-icon">
 	<script src="jquery.js"></script>
@@ -421,7 +421,7 @@
 		</ul>
 	</div>
 	<div id="skills">
-		<h3>Skills</h3>
+		<h3>My Skills</h3>
 		<div id="content-of-project">
 			<div class="align-items-of-div">
 				<img src="imgs/frontend.svg" alt="Frontend" id="project-logo">
@@ -504,7 +504,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		</div>
 	</div>
 	<div id="projects">
-		<h3>Projects</h3>
+		<h3>My Projects</h3>
 		<div id="project-of">
 			<?php
 				$sql = "select * from projects;";
@@ -575,7 +575,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		</p>
 	</div>
 	<div id="feedbacks">
-		<h3>Feedbacks</h3>
+		<h3>Customer Feedback</h3>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<?php
@@ -598,7 +598,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 								</div>
 								<div id="description-feedback">
 									<div style="height: 145px; overflow-y: scroll;">
-										<span><?php echo htmlspecialchars($feedback['message']); ?></span>
+										<i>"<?php echo htmlspecialchars($feedback['message']); ?>"</i>
 									</div>
 									<p><strong>Project:</strong> <?php echo htmlspecialchars($feedback['project_name']); ?></p>
 									<?php if (!empty($feedback['source_code_link'])): ?>
@@ -637,7 +637,7 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 	</div>
 
 	<form id="contact" class="contact">
-		<h3>Contact</h3>
+		<h3>Contact Me</h3>
 		<p id="small-text">Do you want to ask me a question? You can leave your question below.</p>
 		<label for="firstname" class="align-items-of-div">
 			<img src="imgs/firstname.svg" alt="First Name" id="email-logo">

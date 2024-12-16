@@ -30,7 +30,7 @@ document.querySelector("#message").addEventListener("click", function() {
 typeText();
 let footer = document.getElementById('footer-content');
 let presentYear = new Date().getFullYear();
-footer.innerHTML = "&copy; Narcis " + presentYear;
+footer.innerHTML = "All Rights Reserved. &copy; "+presentYear+" - Lazar Narcis";
 
 let modal = document.getElementById("modal");
 let modalContent = document.getElementsByClassName("modal-content")[0];
