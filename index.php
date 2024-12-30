@@ -5,6 +5,15 @@
 	require_once __DIR__ . '/vendor/autoload.php'; 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
+
+	$sql = "select * from projects;";
+	$result = mysqli_query($link, $sql);
+	$projects = [];
+	if ($result) {
+		while ($row = mysqli_fetch_assoc($result)) {
+			$projects[] = $row;
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,6 +37,7 @@
 	<script src="assets/js/swiper-bundle.js"></script>
 	<script>
 		$(document).ready(function() {
+			let projects = <?php echo json_encode($projects, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?> || [];
 			let xa = 0;
 			xa = $(window).scrollTop();
 			if (xa > 150) {
@@ -126,6 +136,12 @@
 				return false;
 			});
 			$('#feedbackBtn').on('click', function() {
+				let option_projects = "";
+				if (projects && projects.length) {
+					for(let u = 0; u < projects.length; u++) {
+						option_projects += "<option value='"+projects[u].id+"'>"+projects[u].name+"</option>";
+					}
+				}
 				Swal.fire({
 					title: 'Leave your feedback',
 					html: `
@@ -136,7 +152,10 @@
 							<input id="swal-input3" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Message">
 							<input id="swal-input5" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Profile Picture URL">
 							<input id="swal-input7" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Project Name">
-							<input id="swal-input8" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;" placeholder="Source Code Link">
+							<select id="swal-input8" class="swal2-input" style="height: 30px; padding: 5px; font-size: 14px; margin-bottom: 0 !important;">
+								<option value="" disabled selected>Select Project</option> 
+								${option_projects}
+							</select>
 							<div id="rating" style="display: flex; gap: 5px; justify-content: center; margin-top: 10px;">
 								<span class="star" data-value="1">☆</span>
 								<span class="star" data-value="2">☆</span>
@@ -156,7 +175,7 @@
 						const message = document.getElementById('swal-input3').value;
 						const profile_picture = document.getElementById('swal-input5').value;
 						const project_name = document.getElementById('swal-input7').value;
-						const source_code_link = document.getElementById('swal-input8').value;
+						const project = document.getElementById('swal-input8').value;
 						const stars = document.querySelectorAll('#rating .star.selected').length;
 
 						if (!name) {
@@ -179,8 +198,8 @@
 							Swal.showValidationMessage('Project Name is required');
 							return false;
 						}
-						if (!source_code_link || !/^https?:\/\/.*\..+/.test(source_code_link)) {
-							Swal.showValidationMessage('A valid Source Code Link is required');
+						if (!project) {
+							Swal.showValidationMessage('A Project is required');
 							return false;
 						}
 						if (stars === 0) {
@@ -194,7 +213,7 @@
 							message: message,
 							profile_picture: profile_picture,
 							project_name: project_name,
-							source_code_link: source_code_link,
+							project: project,
 							stars: stars
 						};
 					},
@@ -217,7 +236,7 @@
 						const message = result.value.message;
 						const profile_picture = result.value.profile_picture;
 						const project_name = result.value.project_name;
-						const source_code_link = result.value.source_code_link;
+						const project = result.value.project;
 						const stars = result.value.stars;
 						let data = {
 							name: name,
@@ -225,7 +244,7 @@
 							message: message,
 							profile_picture: profile_picture,
 							project_name: project_name,
-							source_code_link: source_code_link,
+							project: project,
 							stars: stars
 						};
 
@@ -507,19 +526,11 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 		<h3>My Projects</h3>
 		<div id="project-of">
 			<?php
-				$sql = "select * from projects;";
-				$result = mysqli_query($link, $sql);
-				$projects = [];
-				if ($result) {
-					while ($row = mysqli_fetch_assoc($result)) {
-						$projects[] = $row;
-					}
-				}
 				if (count($projects)) {
 					$project_id = 1;
 					foreach ($projects as $project) {
 						?>
-							<div id="content-of-projects">
+							<div id="content-of-projects" class="div_project_<?=$project['id'];?>">
 								<div class="align-items-of-div">
 									<img src="<?php echo $project['logo']; ?>" alt="<?php echo $project['name']; ?> Logo" id="project-logo">
 									<b><span><i>&nbsp;<?php echo $project_id; ?></i>. <?php echo $project['name']; ?></span></b>
@@ -601,8 +612,8 @@ Additionally, I secure web applications with SSL certificates from Let's Encrypt
 										<i>"<?php echo htmlspecialchars($feedback['message']); ?>"</i>
 									</div>
 									<p><strong>Project:</strong> <?php echo htmlspecialchars($feedback['project_name']); ?></p>
-									<?php if (!empty($feedback['source_code_link'])): ?>
-										<p><a class="submit" href="<?php echo htmlspecialchars($feedback['source_code_link']); ?>" id="view_source_code" target="_blank">View code / website</a></p>
+									<?php if (!empty($feedback['project_id'])): ?>
+										<p><button class="submit" style="margin-bottom: 0 !important;" data-project-id="<?php echo $feedback['project_id']; ?>" id="view_project" target="_blank">View project</button></p>
 									<?php endif; ?>
 						
 									<p><strong>Rating:</strong> 

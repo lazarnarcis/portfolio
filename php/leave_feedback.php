@@ -15,7 +15,7 @@ $name = $_POST['name'];
 $temail = $_POST['email'];
 $profile_picture = $_POST['profile_picture'];
 $project_name = $_POST['project_name'];
-$source_code_link = $_POST['source_code_link'];
+$project = $_POST['project'];
 $stars = $_POST['stars'];
 
 $mail = new PHPMailer(true);
@@ -90,7 +90,7 @@ try {
         if ($mail->send()) {
             $sql = "INSERT INTO emails (email, subject, message, name) VALUES ('$emailtoSend', '$subject', '$message', 'BOT')";
             mysqli_query($link, $sql);
-            $sql = "INSERT INTO feedbacks (name, email, message, profile_picture, project_name, source_code_link, stars) VALUES ('$name','$temail', '$message','$newPath','$project_name','$source_code_link','$stars')";
+            $sql = "INSERT INTO feedbacks (name, email, message, profile_picture, project_name, project_id, stars) VALUES ('$name','$temail', '$message','$newPath','$project_name','$project','$stars')";
             mysqli_query($link, $sql);
             echo json_encode(['type' => "success", "message" => "Your feedback has been sent! Thank you! <b>Wait administrator to verify...</b>"]);
         } else {

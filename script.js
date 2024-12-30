@@ -97,3 +97,18 @@ const swiper = new Swiper('.swiper-container', {
         },
     },
 });
+
+document.querySelectorAll('.submit').forEach(button => {
+	button.addEventListener('click', function() {
+	  const projectId = this.getAttribute('data-project-id');
+	  const targetDiv = document.querySelector(`.div_project_${projectId}`);
+	  if (targetDiv) {
+		targetDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		targetDiv.style.transition = 'background-color 1s';
+		targetDiv.style.backgroundColor = 'yellow';
+		setTimeout(() => {
+		  targetDiv.style.backgroundColor = '';
+		}, 1000);
+	  }  
+	});
+});
